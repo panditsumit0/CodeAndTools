@@ -1,0 +1,78 @@
+import React from 'react';
+import {
+  Braces,
+  FileCode2,
+  KeyRound,
+  Binary,
+  Fingerprint,
+  Clock,
+  Link2,
+  Regex,
+  Hash,
+  Palette,
+  Database,
+  Shield,
+  Globe,
+  Terminal,
+  Search,
+  Sparkles,
+  ArrowRight,
+  Code2,
+  FileText,
+  HelpCircle,
+  BookOpen,
+  Coffee,
+  Cpu,
+  Layers,
+  GraduationCap,
+  Play,
+  FileType,
+  FileArchive,
+  Minimize2,
+  Image,
+  Repeat,
+  LucideProps,
+} from 'lucide-react';
+
+const ICONS: Record<string, React.FC<LucideProps>> = {
+  Braces,
+  FileCode2,
+  KeyRound,
+  Binary,
+  Fingerprint,
+  Clock,
+  Link2,
+  Regex,
+  Hash,
+  Palette,
+  Database,
+  Shield,
+  Globe,
+  Terminal,
+  Search,
+  Sparkles,
+  ArrowRight,
+  Code2,
+  FileText,
+  HelpCircle,
+  BookOpen,
+  Coffee,
+  Cpu,
+  Layers,
+  GraduationCap,
+  Play,
+  FileType,
+  FileArchive,
+  Minimize2,
+  Image,
+  Repeat,
+};
+
+interface DynamicIconProps extends LucideProps {
+  name: string;
+}
+
+export function DynamicIcon({ name, ...props }: DynamicIconProps) {
+  const IconComponent = ICONS[name] || Terminal;
+  return <IconComponent {...props} />;
+}

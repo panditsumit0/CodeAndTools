@@ -1,5 +1,5 @@
 {
-  "name": "devkit",
+  "name": "devforge",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,24 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@google/genai": "^2.24.0",
+    "@monaco-editor/react": "^4.7.0",
+    "docx": "^9.7.2",
+    "js-yaml": "^5.4.2",
+    "jszip": "^3.10.2",
+    "lucide-react": "^1.48.0",
+    "mammoth": "^1.12.3",
     "next": "16.3.6",
+    "pdf-lib": "^1.17.1",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
