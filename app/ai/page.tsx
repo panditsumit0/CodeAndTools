@@ -3,11 +3,11 @@ import { Sparkles } from 'lucide-react';
 import { AIChatPage } from '@/components/ai/AIChatPage';
 
 export const metadata: Metadata = {
-  title: 'DevForge AI — Your AI Coding & Learning Assistant',
+  title: 'Code&Tools AI — Your AI Coding & Learning Assistant',
   description:
-    'Ask DevForge AI to explain code, debug errors, optimize algorithms, convert between languages, and learn programming concepts. Powered by Gemini.',
+    'Ask Code&Tools AI to explain code, debug errors, optimize algorithms, convert between languages, and learn programming concepts. Powered by Gemini.',
   openGraph: {
-    title: 'DevForge AI — Coding & Learning Assistant',
+    title: 'Code&Tools AI — Coding & Learning Assistant',
     description: 'AI-powered coding assistant for developers and B.Tech students.',
   },
 };
@@ -22,7 +22,7 @@ export default function AIPage() {
           <span>AI-Powered</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
-          DevForge AI
+          Code&Tools AI
         </h1>
         <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
           Your AI assistant for coding, debugging, learning, and building.

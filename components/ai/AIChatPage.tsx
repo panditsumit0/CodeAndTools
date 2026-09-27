@@ -69,7 +69,7 @@ export function AIChatPage() {
           {
             icon: '🔒',
             title: 'Private & Secure',
-            desc: 'Your code is sent only to Gemini AI for processing — never stored or logged by DevForge.',
+            desc: 'Your code is sent only to Gemini AI for processing — never stored or logged by Code&Tools.',
           },
         ].map(({ icon, title, desc }) => (
           <div

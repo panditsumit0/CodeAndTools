@@ -38,7 +38,7 @@ export function CompilerToolbar({
             </div>
             <div>
               <span className="font-bold text-sm sm:text-base text-zinc-900 dark:text-white">
-                DevForge Compiler
+                Code&Tools Compiler
               </span>
               <span className="text-[10px] ml-2 px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-[#151B24] text-zinc-600 dark:text-[#94A3B8] border border-transparent dark:border-[#1F2937] font-mono">
                 {languageConfig.version}

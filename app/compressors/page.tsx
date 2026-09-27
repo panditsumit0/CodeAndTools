@@ -5,11 +5,11 @@ import { ToolCard } from "@/components/tools/ToolCard";
 import { Minimize2, ShieldCheck, Zap, Sparkles, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online File Compressors | DevForge",
+  title: "Online File Compressors | Code&Tools",
   description:
     "Compress images, optimize PDF files, and build ZIP archives directly in your browser. 100% private, free, and runs locally with zero uploads.",
   openGraph: {
-    title: "Online File Compressors | DevForge",
+    title: "Online File Compressors | Code&Tools",
     description: "Fast, 100% private browser-based file compression tools.",
     url: "https://devkit.dev/compressors",
   },
@@ -75,7 +75,7 @@ export default function CompressorsHubPage() {
           </div>
           <h3 className="text-base font-semibold text-foreground">Absolute Data Privacy</h3>
           <p className="text-xs text-muted-foreground leading-relaxed">
-            Personal photos, financial statements, and contracts stay on your device. DevForge uses zero remote servers or telemetry on file operations.
+            Personal photos, financial statements, and contracts stay on your device. Code&Tools uses zero remote servers or telemetry on file operations.
           </p>
         </div>
 

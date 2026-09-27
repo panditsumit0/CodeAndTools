@@ -4,7 +4,7 @@ import { CPP_COURSE } from '@/lib/learn/cpp';
 import { CourseLayout } from '@/components/learn/CourseLayout';
 
 export const metadata: Metadata = {
-  title: 'Learn C++ Programming for B.Tech Students | DevForge',
+  title: 'Learn C++ Programming for B.Tech Students | Code&Tools',
   description:
     'Master C++ programming for engineering students and competitive coders. Learn OOP concepts, classes, inheritance, polymorphism, templates, STL vectors, maps, and algorithms.',
   keywords: [

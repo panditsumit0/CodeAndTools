@@ -4,7 +4,7 @@ import { C_COURSE } from '@/lib/learn/c';
 import { CourseLayout } from '@/components/learn/CourseLayout';
 
 export const metadata: Metadata = {
-  title: 'Learn C Programming for B.Tech Students | DevForge',
+  title: 'Learn C Programming for B.Tech Students | Code&Tools',
   description:
     'Comprehensive C programming guide for engineering students. Learn syntax, variables, data types, loops, pointers, memory allocation, structures, file handling, and viva preparation.',
   keywords: [

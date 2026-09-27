@@ -22,12 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!tool || tool.category !== "compressors") {
     return {
-      title: "Compressor Not Found — DevForge",
+      title: "Compressor Not Found — Code&Tools",
       description: "The requested file compressor utility could not be found.",
     };
   }
 
-  const title = `${tool.name} Online | Free & Private — DevForge`;
+  const title = `${tool.name} Online | Free & Private — Code&Tools`;
   const description = `${tool.shortDescription} 100% private, runs entirely in your browser with zero server uploads.`;
 
   return {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       type: "website",
       url: `https://devkit.dev/compressors/${tool.slug}`,
-      siteName: "DevForge",
+      siteName: "Code&Tools",
     },
     twitter: {
       card: "summary_large_image",

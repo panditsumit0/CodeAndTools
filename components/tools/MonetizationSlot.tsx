@@ -19,7 +19,7 @@ export function MonetizationSlot({ className = '' }: MonetizationSlotProps) {
         <div>
           <div className="flex items-center justify-center sm:justify-start gap-2">
             <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              DevForge Pro for Teams
+              Code&Tools Pro for Teams
             </span>
             <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
               Coming Soon

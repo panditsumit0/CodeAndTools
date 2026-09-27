@@ -437,7 +437,7 @@ export function Compiler() {
     <Suspense
       fallback={
         <div className="p-8 text-center text-sm text-zinc-400">
-          Loading DevForge Compiler workspace...
+          Loading Code&Tools Compiler workspace...
         </div>
       }
     >

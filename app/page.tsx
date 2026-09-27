@@ -37,12 +37,12 @@ export default function HomePage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-500/10 dark:bg-blue-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          {/* DevForge Logo */}
+          {/* Code&Tools Logo */}
           <div className="flex justify-center mb-2">
-            <Link href="/" aria-label="DevForge home" className="group inline-block">
+            <Link href="/" aria-label="Code&Tools home" className="group inline-block">
               <Image
                 src="/branding/devforge-logo.png"
-                alt="DevForge — Build. Learn. Create."
+                alt="Code&Tools — Build. Learn. Create."
                 width={220}
                 height={147}
                 priority
@@ -114,7 +114,7 @@ export default function HomePage() {
                 <span>Featured Online IDE</span>
               </div>
               <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-                DevForge Multi-Language Compiler
+                Code&Tools Multi-Language Compiler
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Compile and execute C, C++, Java, Python, and TypeScript with intelligent input detection, terminal-like prompt collection, live syntax hints, and zero setup.

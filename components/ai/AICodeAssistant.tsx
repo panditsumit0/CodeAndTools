@@ -164,7 +164,7 @@ export function AICodeAssistant() {
           {isGenerating ? (
             <><StopCircle className="w-4 h-4" onClick={e => { e.stopPropagation(); stopGeneration(); }} />Generating...</>
           ) : (
-            <><Sparkles className="w-4 h-4" />Ask DevForge AI</>
+            <><Sparkles className="w-4 h-4" />Ask Code&Tools AI</>
           )}
         </button>
       </div>
@@ -188,7 +188,7 @@ export function AICodeAssistant() {
           {messages.length === 0 && !isGenerating && (
             <div className="h-full flex flex-col items-center justify-center text-center py-12 space-y-3">
               <Bot className="w-10 h-10 text-zinc-700" />
-              <p className="text-sm text-zinc-500">Paste your code and click <strong className="text-zinc-400">Ask DevForge AI</strong></p>
+              <p className="text-sm text-zinc-500">Paste your code and click <strong className="text-zinc-400">Ask Code&Tools AI</strong></p>
               <p className="text-xs text-zinc-600">The AI will {ACTIONS.find(a => a.key === selectedAction)?.desc?.toLowerCase()}</p>
             </div>
           )}

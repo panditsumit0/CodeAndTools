@@ -134,7 +134,7 @@ export function JsonFormatterTool() {
 
   const handleLoadSample = () => {
     const sample = {
-      project: 'DevForge',
+      project: 'Code&Tools',
       version: '1.0.0',
       description: 'Privacy-focused developer utilities in your browser',
       features: ['Client-side execution', 'Dark mode', 'Zero telemetry'],

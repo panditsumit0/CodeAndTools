@@ -87,14 +87,14 @@ export function Navbar() {
           <Link
               href="/"
               onClick={handleNavClick}
-              aria-label="DevForge home"
+              aria-label="Code&Tools home"
               className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-blue-500/40 rounded-lg p-1 transition-all"
             >
               {/* Icon mark — always visible */}
               <div className="relative w-9 h-9 shrink-0 group-hover:scale-105 group-hover:brightness-110 transition-all duration-200">
                 <Image
                   src="/branding/devforge-icon.png"
-                  alt="DevForge icon"
+                  alt="Code&Tools icon"
                   width={36}
                   height={36}
                   priority
@@ -104,7 +104,7 @@ export function Navbar() {
               {/* Wordmark — hidden on very small screens */}
               <span className="hidden sm:flex flex-col leading-none">
                 <span className="font-extrabold text-base tracking-tight text-zinc-900 dark:text-white">
-                  DevForge
+                  Code&Tools
                 </span>
                 <span className="text-[9px] font-semibold tracking-widest uppercase text-blue-500/80 dark:text-blue-400/80">
                   Build. Learn. Create.
@@ -350,7 +350,7 @@ export function Navbar() {
             >
               <div className="flex items-center gap-2">
                 <Terminal className="w-4 h-4 stroke-[2.5]" />
-                <span>DevForge Compiler (Online IDE)</span>
+                <span>Code&Tools Compiler (Online IDE)</span>
               </div>
               <ChevronRight className="w-4 h-4" />
             </Link>

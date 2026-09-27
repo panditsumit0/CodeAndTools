@@ -714,7 +714,7 @@ export function FileCompressorWorkspace({
               <span>Looking for Video Compression?</span>
             </div>
             <p className="text-[11px] leading-relaxed">
-              High-definition video re-encoding (H.264/AV1/VP9) requires multi-gigabyte WebAssembly binaries and significant hardware resources. Rather than providing a fake or unresponsive tool, DevForge prioritizes ultra-fast, 100% reliable image, document, and archive compression.
+              High-definition video re-encoding (H.264/AV1/VP9) requires multi-gigabyte WebAssembly binaries and significant hardware resources. Rather than providing a fake or unresponsive tool, Code&Tools prioritizes ultra-fast, 100% reliable image, document, and archive compression.
             </p>
           </div>
         </div>

@@ -12,20 +12,20 @@ export function Footer() {
           <div className="md:col-span-2 space-y-3">
             <Link
               href="/"
-              aria-label="DevForge home"
+              aria-label="Code&Tools home"
               className="flex items-center gap-3 group"
             >
               <div className="relative w-10 h-10 shrink-0 group-hover:scale-105 group-hover:brightness-110 transition-all duration-200">
                 <Image
                   src="/branding/devforge-icon.png"
-                  alt="DevForge — Build. Learn. Create."
+                  alt="Code&Tools — Build. Learn. Create."
                   width={40}
                   height={40}
                   className="w-full h-full object-contain"
                 />
               </div>
               <span className="flex flex-col leading-none">
-                <span className="font-extrabold text-lg text-zinc-900 dark:text-white">DevForge</span>
+                <span className="font-extrabold text-lg text-zinc-900 dark:text-white">Code&Tools</span>
                 <span className="text-[10px] font-semibold tracking-widest uppercase text-blue-500/70 dark:text-blue-400/70">Build. Learn. Create.</span>
               </span>
             </Link>
@@ -82,7 +82,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  About DevForge
+                  About Code&Tools
                 </Link>
               </li>
               <li>
@@ -103,7 +103,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-zinc-200 dark:border-[#1F2937] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <p className="text-zinc-500">
-            &copy; {new Date().getFullYear()} DevForge. Build. Learn. Create.
+            &copy; {new Date().getFullYear()} Code&Tools. Build. Learn. Create.
           </p>
           <div className="flex items-center gap-1 text-zinc-500">
             <span>Crafted with privacy in mind. Everything stays in your browser.</span>

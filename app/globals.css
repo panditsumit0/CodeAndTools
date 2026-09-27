@@ -115,7 +115,7 @@
 }
 
 .dark {
-  /* DevForge Dark Theme (Primary Identity) */
+  /* Code&Tools Dark Theme (Primary Identity) */
   --background: #070A0F;
   --foreground: #F8FAFC;
   --card: #0D1117;
@@ -183,7 +183,7 @@ body {
   background-color: var(--background);
 }
 
-/* Subtle DevForge Dark Scrollbar */
+/* Subtle Code&Tools Dark Scrollbar */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;

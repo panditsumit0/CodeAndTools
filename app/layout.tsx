@@ -18,14 +18,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://devforge.dev'),
   title: {
-    default: 'DevForge — Build. Learn. Create. | Tools for Developers & B.Tech Students',
-    template: '%s | DevForge',
+    default: 'Code&Tools — Build. Learn. Create. | Tools for Developers & B.Tech Students',
+    template: '%s | Code&Tools',
   },
   description:
-    'DevForge is a complete toolkit for developers and B.Tech students with developer tools, online compilers, converters, compressors, and programming resources.',
+    'Code&Tools is a complete toolkit for developers and B.Tech students with developer tools, online compilers, converters, compressors, and programming resources.',
   keywords: [
     'developer tools',
-    'devforge',
+    'code&tools',
     'b.tech tools',
     'online compiler',
     'json formatter',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     'client-side utilities',
     'private developer tools',
   ],
-  authors: [{ name: 'DevForge Team' }],
-  creator: 'DevForge',
+  authors: [{ name: 'Code&Tools Team' }],
+  creator: 'Code&Tools',
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://devforge.dev',
-    siteName: 'DevForge',
-    title: 'DevForge — Build. Learn. Create.',
+    siteName: 'Code&Tools',
+    title: 'Code&Tools — Build. Learn. Create.',
     description:
       'Developer tools, online compiler, file converters, compressors, and programming resources. 100% private, browser-based.',
     images: [
@@ -65,15 +65,15 @@ export const metadata: Metadata = {
         url: '/branding/devforge-og.png',
         width: 1400,
         height: 787,
-        alt: 'DevForge — Build. Learn. Create.',
+        alt: 'Code&Tools — Build. Learn. Create.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DevForge — Build. Learn. Create.',
+    title: 'Code&Tools — Build. Learn. Create.',
     description:
-      'DevForge: compiler, learning guides, converters, compressors and more — 100% client-side.',
+      'Code&Tools: compiler, learning guides, converters, compressors and more — 100% client-side.',
     images: ['/branding/devforge-og.png'],
   },
   robots: {

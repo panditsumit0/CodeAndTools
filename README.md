@@ -1,4 +1,4 @@
-# DevForge — Build. Learn. Create.
+# Code&Tools — Build. Learn. Create.
 
 > **"Fast, private, browser-based tools for developers."**
 
@@ -7,7 +7,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg?style=flat-square)](LICENSE)
 
-DevForge is an all-in-one suite of essential utilities designed for software engineers, DevOps practitioners, and web developers. Unlike traditional online tools that ingest payloads into third-party cloud backends, **DevForge runs 100% of data transformations and cryptographic digests directly inside your local browser runtime**.
+Code&Tools is an all-in-one suite of essential utilities designed for software engineers, DevOps practitioners, and web developers. Unlike traditional online tools that ingest payloads into third-party cloud backends, **Code&Tools runs 100% of data transformations and cryptographic digests directly inside your local browser runtime**.
 
 ---
 
@@ -77,10 +77,10 @@ Interactive documentation with runnable code examples, practice questions, and e
 
 ```bash
 # Clone the repository
-git clone https://github.com/example-org/devforge.git
+git clone https://github.com/example-org/code-and-tools.git
 
 # Enter project directory
-cd devforge
+cd code-and-tools
 
 # Install dependencies
 npm install

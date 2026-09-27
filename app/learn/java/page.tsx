@@ -4,7 +4,7 @@ import { JAVA_COURSE } from '@/lib/learn/java';
 import { CourseLayout } from '@/components/learn/CourseLayout';
 
 export const metadata: Metadata = {
-  title: 'Learn Java Programming for B.Tech Students | DevForge',
+  title: 'Learn Java Programming for B.Tech Students | Code&Tools',
   description:
     'Core Java programming guide for B.Tech engineering exams and IT campus placements. Learn JDK vs JRE vs JVM, OOP architecture, Strings, exception handling, and the Collections Framework.',
   keywords: [

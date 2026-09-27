@@ -50,7 +50,7 @@ int main() {
     }
 }
 `,
-    sampleStdin: "DevForge\n20",
+    sampleStdin: "Code&Tools\n20",
     judge0Id: 62, // Java (OpenJDK 13.0.1)
     pistonLanguage: 'java',
     pistonVersion: '15.0.2',
@@ -74,7 +74,7 @@ int main() {
     version: '5.6.2 (Node 22)',
     extension: '.ts',
     editorLanguage: 'typescript',
-    starterCode: `// DevForge TypeScript Online Runner
+    starterCode: `// Code&Tools TypeScript Online Runner
 interface Student {
     id: number;
     name: string;
@@ -96,7 +96,7 @@ const engineeringStudent: Student = {
 
 displayStudent(engineeringStudent);
 `,
-    sampleStdin: "DevForge\n2026",
+    sampleStdin: "Code&Tools\n2026",
     judge0Id: 101, // TypeScript (5.6.2) on Judge0 CE
     pistonLanguage: 'typescript',
     pistonVersion: '5.0.3',

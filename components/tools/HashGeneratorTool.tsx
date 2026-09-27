@@ -15,7 +15,7 @@ interface HashResults {
 }
 
 export function HashGeneratorTool() {
-  const [input, setInput] = useState<string>('DevForge: Build. Learn. Create. u2014 Complete toolkit for developers.');
+  const [input, setInput] = useState<string>('Code&Tools: Build. Learn. Create. u2014 Complete toolkit for developers.');
   const [uppercase, setUppercase] = useState<boolean>(false);
   const [hashes, setHashes] = useState<HashResults>({
     sha256: '',

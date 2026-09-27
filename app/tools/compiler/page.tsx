@@ -6,9 +6,9 @@ import { Compiler } from '@/components/compiler/Compiler';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Online Compiler — C, C++, Java, Python & TypeScript | DevForge',
+  title: 'Online Compiler — C, C++, Java, Python & TypeScript | Code&Tools',
   description:
-    "Run C, C++, Java, Python, and TypeScript code online with DevForge's fast browser-based compiler. Features Monaco editor, stdin input, line-numbered diagnostics, and sandboxed execution.",
+    "Run C, C++, Java, Python, and TypeScript code online with Code&Tools' fast browser-based compiler. Features Monaco editor, stdin input, line-numbered diagnostics, and sandboxed execution.",
   keywords: [
     'online compiler',
     'C compiler',
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
     'devkit compiler',
   ],
   openGraph: {
-    title: 'Online Compiler — C, C++, Java, Python & TypeScript | DevForge',
+    title: 'Online Compiler — C, C++, Java, Python & TypeScript | Code&Tools',
     description:
-      "Run C, C++, Java, Python, and TypeScript code online with DevForge's fast browser-based compiler.",
+      "Run C, C++, Java, Python, and TypeScript code online with Code&Tools' fast browser-based compiler.",
     url: 'https://devkit.dev/tools/compiler',
-    siteName: 'DevForge',
+    siteName: 'Code&Tools',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Online Compiler — C, C++, Java, Python & TypeScript | DevForge',
+    title: 'Online Compiler — C, C++, Java, Python & TypeScript | Code&Tools',
     description: 'Fast, secure online code runner for C, C++, Java, Python, and TypeScript.',
   },
 };

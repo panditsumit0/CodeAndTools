@@ -345,7 +345,7 @@ export function TerminalPanel({
               </span>
             )}
           </div>
-          <span>{result.provider || 'DevForge Sandbox'}</span>
+          <span>{result.provider || 'Code&Tools Sandbox'}</span>
         </div>
       )}
 
@@ -353,7 +353,7 @@ export function TerminalPanel({
       <div className="p-3.5 bg-[#090D14] border-t border-[#1F2937] text-xs space-y-2">
         <div className="flex items-center gap-1.5 font-bold text-zinc-300">
           <HelpCircle className="w-3.5 h-3.5 text-[#22C55E]" />
-          <span>How input works in DevForge:</span>
+          <span>How input works in Code&Tools:</span>
         </div>
         <p className="text-[11px] text-zinc-400 leading-relaxed">
           For programs that use input functions such as <code>scanf()</code>, <code>cin</code>, <code>Scanner</code>, or <code>input()</code>, enter your values when the program asks for them above before running.

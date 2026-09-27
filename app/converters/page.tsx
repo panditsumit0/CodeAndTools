@@ -5,11 +5,11 @@ import { ToolCard } from "@/components/tools/ToolCard";
 import { Repeat, ShieldCheck, Zap, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online File Converters | Free & Private — DevForge",
+  title: "Online File Converters | Free & Private — Code&Tools",
   description:
     "Convert PDF to Word, Word to PDF, Image to PDF, JPG to PNG, WebP, and text files directly in your browser. 100% private with zero cloud uploads.",
   openGraph: {
-    title: "Online File Converters | DevForge",
+    title: "Online File Converters | Code&Tools",
     description: "Fast, 100% private browser-based file converters.",
     url: "https://devkit.dev/converters",
   },
@@ -61,10 +61,10 @@ export default function ConvertersHubPage() {
       <div className="p-8 rounded-3xl border border-border/80 bg-card/60 backdrop-blur-sm space-y-4">
         <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
           <ShieldCheck className="w-5 h-5 text-emerald-500" />
-          <span>How DevForge Converters Protect Your Privacy</span>
+          <span>How Code&Tools Converters Protect Your Privacy</span>
         </h2>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Most online file conversion services require you to upload your sensitive personal documents, resumes, and proprietary images to an unknown remote server queue. DevForge breaks this pattern: our conversion engines compile WebAssembly, HTML5 Canvas, and specialized open-source document engines (like <code className="text-xs bg-muted px-1.5 py-0.5 rounded font-mono">pdf-lib</code> and <code className="text-xs bg-muted px-1.5 py-0.5 rounded font-mono">docx</code>) to run completely within your local browser sandbox.
+          Most online file conversion services require you to upload your sensitive personal documents, resumes, and proprietary images to an unknown remote server queue. Code&Tools breaks this pattern: our conversion engines compile WebAssembly, HTML5 Canvas, and specialized open-source document engines (like <code className="text-xs bg-muted px-1.5 py-0.5 rounded font-mono">pdf-lib</code> and <code className="text-xs bg-muted px-1.5 py-0.5 rounded font-mono">docx</code>) to run completely within your local browser sandbox.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
           <div className="p-4 rounded-xl border border-border/50 bg-background/50 text-xs space-y-1">

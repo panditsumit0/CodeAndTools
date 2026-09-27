@@ -44,7 +44,7 @@ export class Judge0Provider implements CompilerProvider {
       return {
         status: 'error',
         stdout: '',
-        stderr: `Unsupported language: "${request.language}". DevForge Compiler supports C, C++, Java, Python, and TypeScript.`,
+        stderr: `Unsupported language: "${request.language}". Code&Tools Compiler supports C, C++, Java, Python, and TypeScript.`,
         exitCode: 1,
         executionTime: null,
       };

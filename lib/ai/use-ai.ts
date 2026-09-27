@@ -69,7 +69,7 @@ export function useAI() {
 
       if (!response.ok) {
         const errData = await response.json().catch(() => ({
-          error: 'DevForge AI encountered an unexpected provider error.',
+          error: 'Code&Tools AI encountered an unexpected provider error.',
         }));
         const customErr = new Error(errData.error || `HTTP ${response.status}`);
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -139,7 +139,7 @@ export function useAI() {
       } else {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const anyErr = err as any;
-        const errorMsg = err instanceof Error ? err.message : 'DevForge AI could not connect to NVIDIA NIM.';
+        const errorMsg = err instanceof Error ? err.message : 'Code&Tools AI could not connect to NVIDIA NIM.';
         const technicalDetails = anyErr?.technicalDetails;
         setMessages(prev =>
           prev.map(m =>

@@ -70,7 +70,7 @@ export const TOOLS: ToolDefinition[] = [
     faq: [
       {
         question: 'Is my JSON uploaded to any server or logged?',
-        answer: 'No. DevForge executes all formatting and validation locally inside your browser using the JavaScript runtime. No network requests are sent.',
+        answer: 'No. Code&Tools executes all formatting and validation locally inside your browser using the JavaScript runtime. No network requests are sent.',
       },
       {
         question: 'What is the maximum file size supported?',
@@ -115,7 +115,7 @@ export const TOOLS: ToolDefinition[] = [
       },
       {
         question: 'Are my configuration secrets safe?',
-        answer: 'Yes. DevForge never uploads your configuration files. All parsing and conversion are executed locally in memory.',
+        answer: 'Yes. Code&Tools never uploads your configuration files. All parsing and conversion are executed locally in memory.',
       },
     ],
     relatedSlugs: ['json-formatter', 'base64', 'url-encoder'],
@@ -152,7 +152,7 @@ export const TOOLS: ToolDefinition[] = [
       },
       {
         question: 'Is it safe to paste production tokens here?',
-        answer: 'Yes, DevForge runs completely in your browser without sending any payload across the network. However, as a general security best practice, never share production bearer tokens with untrusted devices.',
+        answer: 'Yes, Code&Tools runs completely in your browser without sending any payload across the network. However, as a general security best practice, never share production bearer tokens with untrusted devices.',
       },
       {
         question: 'What is a JWT composed of?',
@@ -189,7 +189,7 @@ export const TOOLS: ToolDefinition[] = [
     faq: [
       {
         question: 'Why do other Base64 web tools fail on emojis and accents?',
-        answer: 'Standard browser btoa/atob only handles Latin-1 (characters up to code point 255). DevForge uses the modern TextEncoder and TextDecoder APIs to handle 100% of Unicode and emojis properly.',
+        answer: 'Standard browser btoa/atob only handles Latin-1 (characters up to code point 255). Code&Tools uses the modern TextEncoder and TextDecoder APIs to handle 100% of Unicode and emojis properly.',
       },
       {
         question: 'What is URL-safe Base64?',
@@ -226,7 +226,7 @@ export const TOOLS: ToolDefinition[] = [
     faq: [
       {
         question: 'Are these UUIDs cryptographically secure?',
-        answer: 'Yes. DevForge utilizes the browser\'s native crypto.randomUUID() and crypto.getRandomValues() which draw entropy from the operating system\'s cryptographic PRNG.',
+        answer: 'Yes. Code&Tools utilizes the browser\'s native crypto.randomUUID() and crypto.getRandomValues() which draw entropy from the operating system\'s cryptographic PRNG.',
       },
       {
         question: 'What are the chances of two UUID v4 collisions?',
@@ -267,7 +267,7 @@ export const TOOLS: ToolDefinition[] = [
       },
       {
         question: 'What is the Year 2038 problem?',
-        answer: 'On January 19, 2038, 32-bit signed integers will overflow the Unix timestamp counter. Modern systems and DevForge use 64-bit timestamps which will not overflow for billions of years.',
+        answer: 'On January 19, 2038, 32-bit signed integers will overflow the Unix timestamp counter. Modern systems and Code&Tools use 64-bit timestamps which will not overflow for billions of years.',
       },
     ],
     relatedSlugs: ['jwt-decoder', 'uuid-generator', 'regex-tester'],
@@ -278,7 +278,7 @@ export const TOOLS: ToolDefinition[] = [
     tagline: 'Safely encode and decode full URLs and query string parameters',
     shortDescription: 'Encode and decode URLs and URI components with automatic query parameter parsing.',
     longDescription:
-      'Safely encode special characters for URLs and query parameters, or decode percent-encoded URLs. DevForge also automatically breaks down and displays all query string parameters in a clean interactive table.',
+      'Safely encode special characters for URLs and query parameters, or decode percent-encoded URLs. Code&Tools also automatically breaks down and displays all query string parameters in a clean interactive table.',
     category: 'web',
     categoryLabel: 'Web',
     icon: 'Link2',
@@ -337,7 +337,7 @@ export const TOOLS: ToolDefinition[] = [
     faq: [
       {
         question: 'Which regular expression engine is used?',
-        answer: 'DevForge uses your browser\'s native JavaScript RegExp engine (V8 on Chrome/Edge/Node, SpiderMonkey on Firefox, JavaScriptCore on Safari), guaranteeing 100% fidelity with client-side code.',
+        answer: 'Code&Tools uses your browser\'s native JavaScript RegExp engine (V8 on Chrome/Edge/Node, SpiderMonkey on Firefox, JavaScriptCore on Safari), guaranteeing 100% fidelity with client-side code.',
       },
       {
         question: 'What do regex flags do?',
@@ -464,7 +464,7 @@ export const TOOLS: ToolDefinition[] = [
     ],
     faq: [
       {
-        question: 'How does DevForge execute code securely?',
+        question: 'How does Code&Tools execute code securely?',
         answer:
           'All code execution occurs inside isolated, sandboxed container environments with strict resource caps on CPU time, wall time, memory, and output size. The main application never executes user code directly.',
       },

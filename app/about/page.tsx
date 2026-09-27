@@ -14,11 +14,11 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About DevForge — Private Browser Utilities for Developers & B.Tech Students',
+  title: 'About Code&Tools — Private Browser Utilities for Developers & B.Tech Students',
   description:
-    'Learn about DevForge architecture, our zero-network-transfer privacy promise, and our developer-first philosophy.',
+    'Learn about Code&Tools architecture, our zero-network-transfer privacy promise, and our developer-first philosophy.',
   openGraph: {
-    title: 'About DevForge — Private Browser Utilities for Developers',
+    title: 'About Code&Tools — Private Browser Utilities for Developers',
     description: 'Build. Learn. Create. — A complete toolkit, private and browser-based.',
   },
 };
@@ -75,7 +75,7 @@ export default function AboutPage() {
           Fast, private, browser-based tools for developers.
         </h1>
         <p className="text-base sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed">
-          DevForge was built with a single guiding principle: <strong>developer data belongs on developer machines</strong>.
+          Code&Tools was built with a single guiding principle: <strong>developer data belongs on developer machines</strong>.
         </p>
       </div>
 
@@ -100,7 +100,7 @@ export default function AboutPage() {
             Most online utility sites send your JSON payloads, bearer tokens, passwords, and database configurations straight to their backend servers. Even if unintentional, this creates enormous risks: logs get indexed, third-party CDNs inspect packets, and corporate secrets risk leakage.
           </p>
           <p>
-            DevForge eliminates this entire vulnerability class by executing 100% of compute operations client-side in your browser. We leverage standard Web APIs:
+            Code&Tools eliminates this entire vulnerability class by executing 100% of compute operations client-side in your browser. We leverage standard Web APIs:
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm font-medium text-zinc-800 dark:text-zinc-200">
             <li className="flex items-start gap-2 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/60">
@@ -127,7 +127,7 @@ export default function AboutPage() {
       <section className="space-y-6">
         <div>
           <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white">
-            DevForge vs Traditional Online Tools
+            Code&Tools vs Traditional Online Tools
           </h2>
           <p className="text-xs sm:text-sm text-zinc-500 mt-1">
             An honest comparison of privacy and technical tradeoffs.
@@ -139,7 +139,7 @@ export default function AboutPage() {
             <thead className="bg-zinc-50 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 font-bold border-b border-zinc-200 dark:border-zinc-800">
               <tr>
                 <th className="py-3 px-4">Feature / Metric</th>
-                <th className="py-3 px-4 text-emerald-600 dark:text-emerald-400">DevForge</th>
+                <th className="py-3 px-4 text-emerald-600 dark:text-emerald-400">Code&Tools</th>
                 <th className="py-3 px-4 text-zinc-500">Typical Online Tool</th>
               </tr>
             </thead>
@@ -172,7 +172,7 @@ export default function AboutPage() {
               Product Roadmap & Future Pro Plans
             </h2>
             <p className="text-xs sm:text-sm text-zinc-500">
-              Our vision for sustaining DevForge without annoying ads
+              Our vision for sustaining Code&Tools without annoying ads
             </p>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-2">
-            <span className="font-bold text-zinc-900 dark:text-zinc-100">Team Shared Presets (DevForge Pro)</span>
+            <span className="font-bold text-zinc-900 dark:text-zinc-100">Team Shared Presets (Code&Tools Pro)</span>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
               Encrypted end-to-end cloud sync for shared company regex libraries, curl templates, and schema validators.
             </p>
@@ -193,7 +193,7 @@ export default function AboutPage() {
           <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-2">
             <span className="font-bold text-zinc-900 dark:text-zinc-100">Local CLI Companion</span>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Run the exact same fast parsing engines inside your terminal via <code className="text-emerald-500">devforge-cli</code>.
+              Run the exact same fast parsing engines inside your terminal via <code className="text-emerald-500">code-tools-cli</code>.
             </p>
           </div>
         </div>

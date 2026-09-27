@@ -15,7 +15,7 @@ import { DynamicIcon } from '@/components/icons/DynamicIcon';
 import { BackToTop } from '@/components/BackToTop';
 
 export const metadata: Metadata = {
-  title: 'Which Programming Language Should You Learn? — B.Tech Guide | DevForge',
+  title: 'Which Programming Language Should You Learn? — B.Tech Guide | Code&Tools',
   description:
     'Compare C, C++, Java, Python, and TypeScript. Find the ideal programming language for B.Tech semester exams, DSA, competitive coding, AI/ML, and web engineering.',
   keywords: [

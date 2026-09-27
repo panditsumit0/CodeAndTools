@@ -38,8 +38,8 @@ export async function compressPdf(
     pdfDoc.setAuthor('');
     pdfDoc.setSubject('');
     pdfDoc.setKeywords([]);
-    pdfDoc.setProducer('DevForge PDF Compressor');
-    pdfDoc.setCreator('DevForge');
+    pdfDoc.setProducer('Code&Tools PDF Compressor');
+    pdfDoc.setCreator('Code&Tools');
   }
 
   // Save with stream compression options

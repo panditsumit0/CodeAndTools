@@ -4,7 +4,7 @@ import { TYPESCRIPT_COURSE } from '@/lib/learn/typescript';
 import { CourseLayout } from '@/components/learn/CourseLayout';
 
 export const metadata: Metadata = {
-  title: 'Learn TypeScript for Beginners & Web Developers | DevForge',
+  title: 'Learn TypeScript for Beginners & Web Developers | Code&Tools',
   description:
     'Learn modern TypeScript for full-stack web development and engineering projects. Learn static typing, interfaces, type aliases, union types, generics, and React/Node integration.',
   keywords: [

@@ -6,10 +6,10 @@ import { DynamicIcon } from '@/components/icons/DynamicIcon';
 import { Layers } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Categories — DevForge',
+  title: 'Categories — Code&Tools',
   description: 'Explore developer tools grouped by category: Data, Security, Web, and Developer Utilities.',
   openGraph: {
-    title: 'Categories — DevForge',
+    title: 'Categories — Code&Tools',
     description: 'Explore developer tools grouped by category.',
   },
 };

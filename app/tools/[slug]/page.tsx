@@ -31,12 +31,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!tool) {
     return {
-      title: 'Tool Not Found — DevForge',
+      title: 'Tool Not Found — Code&Tools',
       description: 'The requested developer utility could not be found.',
     };
   }
 
-  const title = `${tool.name} — Free Browser-Based Developer Tool | DevForge`;
+  const title = `${tool.name} — Free Browser-Based Developer Tool | Code&Tools`;
   const description = `${tool.shortDescription} 100% private, runs entirely in your browser with zero server uploads.`;
 
   return {
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       type: 'website',
       url: `https://devkit.dev/tools/${tool.slug}`,
-      siteName: 'DevForge',
+      siteName: 'Code&Tools',
     },
     twitter: {
       card: 'summary_large_image',

@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { ShieldCheck, Lock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — DevForge',
-  description: 'DevForge privacy policy: 100% client-side data processing, zero logging, zero telemetry.',
+  title: 'Privacy Policy — Code&Tools',
+  description: 'Code&Tools privacy policy: 100% client-side data processing, zero logging, zero telemetry.',
 };
 
 export default function PrivacyPage() {
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
         <Lock className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
         <div>
           <strong className="block text-base font-bold mb-1">Our Core Commitment:</strong>
-          DevForge does not send your tool inputs, outputs, tokens, or files to any server. Everything is executed purely within your browser runtime using client-side JavaScript and the Web Crypto API.
+          Code&Tools does not send your tool inputs, outputs, tokens, or files to any server. Everything is executed purely within your browser runtime using client-side JavaScript and the Web Crypto API.
         </div>
       </div>
 
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
             1. Zero Server-Side Processing
           </h2>
           <p>
-            When you format JSON, decode a JWT, compute a SHA-256 digest, or encode a URL on DevForge, that data never leaves your browser window. You can disconnect your internet connection or verify in the browser Network Inspector tab that <strong>zero HTTP POST or GET requests contain your input data</strong>.
+            When you format JSON, decode a JWT, compute a SHA-256 digest, or encode a URL on Code&Tools, that data never leaves your browser window. You can disconnect your internet connection or verify in the browser Network Inspector tab that <strong>zero HTTP POST or GET requests contain your input data</strong>.
           </p>
         </section>
 
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             2. Local Browser Storage
           </h2>
           <p>
-            DevForge may use your browser&apos;s native <code className="text-emerald-500">localStorage</code> exclusively for:
+            Code&Tools may use your browser&apos;s native <code className="text-emerald-500">localStorage</code> exclusively for:
           </p>
           <ul className="list-disc pl-5 space-y-1 text-zinc-700 dark:text-zinc-300">
             <li>Your theme preference (dark mode, light mode, or system).</li>
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
             4. Cryptographic Operations
           </h2>
           <p>
-            For hashing (SHA-256, SHA-384, SHA-512) and UUID generation, DevForge uses the standardized W3C <code className="text-emerald-500">window.crypto</code> API, which invokes your operating system&apos;s CSPRNG (Cryptographically Secure Pseudo-Random Number Generator).
+            For hashing (SHA-256, SHA-384, SHA-512) and UUID generation, Code&Tools uses the standardized W3C <code className="text-emerald-500">window.crypto</code> API, which invokes your operating system&apos;s CSPRNG (Cryptographically Secure Pseudo-Random Number Generator).
           </p>
         </section>
 
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
             5. Contact
           </h2>
           <p>
-            If you have questions, security audits, or concerns regarding DevForge&apos;s client-side implementation, inspect the open source code on GitHub or open an issue.
+            If you have questions, security audits, or concerns regarding Code&Tools&apos; client-side implementation, inspect the open source code on GitHub or open an issue.
           </p>
         </section>
       </div>

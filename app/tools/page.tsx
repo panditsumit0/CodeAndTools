@@ -4,11 +4,11 @@ import { ToolsExplorer } from '@/components/tools/ToolsExplorer';
 import { Terminal } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'All Developer Tools — DevForge',
+  title: 'All Developer Tools — Code&Tools',
   description:
     'Browse 100% private, browser-based utilities for developers: JSON formatter, JWT decoder, Base64 encoder, UUID generator, Regex tester, and more.',
   openGraph: {
-    title: 'All Developer Tools — DevForge',
+    title: 'All Developer Tools — Code&Tools',
     description: 'Fast, private, browser-based tools for developers.',
     url: 'https://devkit.dev/tools',
   },

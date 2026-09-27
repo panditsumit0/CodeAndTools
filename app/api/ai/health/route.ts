@@ -54,7 +54,7 @@ export async function GET() {
         reachable: false,
         authorized: false,
         status: 'unhealthy',
-        error: 'DevForge AI health check encountered an unexpected error.',
+        error: 'Code&Tools AI health check encountered an unexpected error.',
       },
       { status: 500 }
     );

@@ -22,12 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!tool || tool.category !== "converters") {
     return {
-      title: "Converter Not Found — DevForge",
+      title: "Converter Not Found — Code&Tools",
       description: "The requested file converter utility could not be found.",
     };
   }
 
-  const title = `${tool.name} Online | Free & Private — DevForge`;
+  const title = `${tool.name} Online | Free & Private — Code&Tools`;
   const description = `${tool.shortDescription} 100% private, processed directly in your browser with zero server uploads.`;
 
   return {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       type: "website",
       url: `https://devkit.dev/converters/${tool.slug}`,
-      siteName: "DevForge",
+      siteName: "Code&Tools",
     },
     twitter: {
       card: "summary_large_image",

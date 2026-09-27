@@ -27,7 +27,7 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
-const SYSTEM_PROMPT = `You are DevForge AI — an expert coding assistant and learning companion built into the DevForge developer toolkit. Your primary audience is B.Tech engineering students and professional software developers.
+const SYSTEM_PROMPT = `You are Code&Tools AI — an expert coding assistant and learning companion built into the Code&Tools developer toolkit. Your primary audience is B.Tech engineering students and professional software developers.
 
 Your personality:
 - Precise, knowledgeable, and friendly
@@ -105,7 +105,7 @@ export async function POST(req: NextRequest) {
     || '127.0.0.1';
 
   if (process.env.NODE_ENV === 'development') {
-    console.log('[DevForge AI] Request', { requestId, ip: ip.slice(0, 8) + '...', ts: new Date().toISOString() });
+    console.log('[Code&Tools AI] Request', { requestId, ip: ip.slice(0, 8) + '...', ts: new Date().toISOString() });
   }
 
   if (!checkRateLimit(ip)) {

@@ -105,7 +105,7 @@ export function AIMessageBubble({ message, onRetry }: AIMessageBubbleProps) {
           <div className="space-y-2">
             <div className="flex items-start gap-2">
               <span className="font-semibold text-red-100 block">
-                {message.content || 'DevForge AI could not connect to Gemini.'}
+                {message.content || 'Code&Tools AI could not connect to Gemini.'}
               </span>
             </div>
             <p className="text-xs text-red-300/80">
