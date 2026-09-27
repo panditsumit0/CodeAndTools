@@ -32,9 +32,9 @@ export default function HomePage() {
   return (
     <div className="space-y-20 pb-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 sm:pt-24 pb-12 sm:pb-20 border-b border-zinc-200 dark:border-zinc-800/80 bg-gradient-to-b from-emerald-500/[0.04] via-transparent to-transparent">
+      <section className="relative overflow-hidden pt-16 sm:pt-24 pb-12 sm:pb-20 border-b border-zinc-200 dark:border-[#1F2937] bg-gradient-to-b from-blue-500/[0.04] via-transparent to-transparent">
         {/* Subtle decorative glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-500/10 dark:bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-500/10 dark:bg-blue-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           {/* DevForge Logo */}
@@ -52,15 +52,15 @@ export default function HomePage() {
           </div>
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold border border-emerald-500/20 shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-blue-500/20 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             <span>Fast, private, browser-based tools & tutorials</span>
           </div>
 
           {/* Main Title */}
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white max-w-4xl mx-auto leading-[1.15]">
             Developer utilities & learning that{' '}
-            <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
               just work.
             </span>
           </h1>
@@ -74,7 +74,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link
               href="/tools/compiler"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm sm:text-base transition-all shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/35 active:scale-98"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-blue-500 text-white font-semibold text-sm sm:text-base transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 active:scale-98"
             >
               <Terminal className="w-4 h-4 stroke-[2.5]" />
               <span>Launch Compiler</span>
@@ -82,17 +82,17 @@ export default function HomePage() {
 
             <Link
               href="/converters"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white/80 dark:bg-[#151B24] hover:bg-zinc-100 dark:hover:bg-[#1F2937] text-zinc-900 dark:text-[#E2E8F0] font-semibold text-sm sm:text-base transition-colors"
             >
-              <Repeat className="w-4 h-4 text-blue-500" />
+              <Repeat className="w-4 h-4 text-[#F97316]" />
               <span>Converters</span>
             </Link>
 
             <Link
               href="/compressors"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-semibold text-sm sm:text-base transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white/80 dark:bg-[#151B24] hover:bg-zinc-100 dark:hover:bg-[#1F2937] text-zinc-900 dark:text-[#E2E8F0] font-semibold text-sm sm:text-base transition-colors"
             >
-              <Minimize2 className="w-4 h-4 text-teal-500" />
+              <Minimize2 className="w-4 h-4 text-[#22D3EE]" />
               <span>Compressors</span>
             </Link>
           </div>
@@ -106,10 +106,10 @@ export default function HomePage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         {/* Major Featured Compiler Spotlight Banner */}
-        <section className="relative overflow-hidden rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-card to-card p-6 sm:p-10 shadow-lg shadow-emerald-500/5">
+        <section className="relative overflow-hidden rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-500/10 via-card to-card p-6 sm:p-10 shadow-lg shadow-blue-500/5">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="space-y-4 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/25">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider border border-blue-500/25">
                 <Terminal className="w-3.5 h-3.5" />
                 <span>Featured Online IDE</span>
               </div>
@@ -134,7 +134,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row lg:flex-col gap-3 w-full sm:w-auto shrink-0">
               <Link
                 href="/tools/compiler"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md shadow-emerald-600/25 transition-all hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary hover:bg-blue-500 text-white font-bold text-sm shadow-md shadow-blue-500/25 transition-all hover:scale-[1.02]"
               >
                 <Play className="w-4 h-4 fill-current" />
                 <span>Open Compiler Workspace</span>
@@ -143,7 +143,7 @@ export default function HomePage() {
                 href="/learn"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-border bg-card hover:bg-muted text-foreground font-semibold text-xs transition-colors"
               >
-                <BookOpen className="w-4 h-4 text-emerald-500" />
+                <BookOpen className="w-4 h-4 text-blue-500" />
                 <span>Browse B.Tech Tutorials</span>
               </Link>
             </div>
@@ -198,7 +198,7 @@ export default function HomePage() {
 
             <Link
               href="/converters"
-              className="text-xs sm:text-sm font-semibold text-blue-500 hover:underline flex items-center gap-1"
+              className="text-xs sm:text-sm font-semibold text-[#F97316] hover:underline flex items-center gap-1"
             >
               <span>All {converterTools.length} converters</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -229,7 +229,7 @@ export default function HomePage() {
 
             <Link
               href="/compressors"
-              className="text-xs sm:text-sm font-semibold text-teal-500 hover:underline flex items-center gap-1"
+              className="text-xs sm:text-sm font-semibold text-[#22D3EE] hover:underline flex items-center gap-1"
             >
               <span>All compressors</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -248,7 +248,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between pb-3 border-b border-border">
             <div>
               <div className="flex items-center gap-2">
-                <GraduationCap className="w-4 h-4 text-emerald-500" />
+                <GraduationCap className="w-4 h-4 text-blue-500" />
                 <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
                   Learn Programming for B.Tech
                 </h2>
@@ -260,7 +260,7 @@ export default function HomePage() {
 
             <Link
               href="/learn"
-              className="text-xs sm:text-sm font-semibold text-emerald-500 hover:underline flex items-center gap-1"
+              className="text-xs sm:text-sm font-semibold text-blue-500 hover:underline flex items-center gap-1"
             >
               <span>Compare all languages</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -295,9 +295,9 @@ export default function HomePage() {
         </section>
 
         {/* Privacy Highlight Banner */}
-        <section className="p-6 sm:p-8 rounded-3xl border border-emerald-500/20 bg-gradient-to-r from-emerald-500/5 via-teal-500/5 to-emerald-500/5 dark:from-emerald-950/20 dark:via-zinc-900 dark:to-emerald-950/20 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <section className="p-6 sm:p-8 rounded-3xl border border-blue-500/20 bg-gradient-to-r from-blue-500/5 via-cyan-500/5 to-blue-500/5 dark:from-blue-950/20 dark:via-[#0D1117] dark:to-blue-950/20 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 flex items-center justify-center shrink-0">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
@@ -312,7 +312,7 @@ export default function HomePage() {
 
           <Link
             href="/about"
-            className="shrink-0 text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5"
+            className="shrink-0 text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5"
           >
             <span>Learn about our architecture</span>
             <ArrowRight className="w-4 h-4" />

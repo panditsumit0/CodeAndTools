@@ -152,7 +152,7 @@ export function ColorConverterTool() {
   return (
     <div className="space-y-8">
       {/* Interactive Picker & Live Swatch Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/60">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center p-6 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/50 dark:bg-[#0B111A]/60">
         {/* Large Color Swatch */}
         <div className="flex flex-col items-center justify-center space-y-3">
           <div
@@ -194,7 +194,7 @@ export function ColorConverterTool() {
                 onChange={(e) => setHexInput(e.target.value)}
                 placeholder="#10B981"
                 maxLength={7}
-                className="w-full px-3.5 py-2 font-mono-code text-sm rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 uppercase"
+                className="w-full px-3.5 py-2 font-mono-code text-sm rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary uppercase"
               />
             </div>
           </div>
@@ -220,7 +220,7 @@ export function ColorConverterTool() {
       {validRgb && validHsl && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* HEX */}
-          <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col justify-between space-y-2">
+          <div className="p-4 rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] flex flex-col justify-between space-y-2">
             <div className="flex items-center justify-between text-xs text-zinc-500">
               <span className="font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300">
                 HEX
@@ -233,7 +233,7 @@ export function ColorConverterTool() {
           </div>
 
           {/* RGB */}
-          <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col justify-between space-y-2">
+          <div className="p-4 rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] flex flex-col justify-between space-y-2">
             <div className="flex items-center justify-between text-xs text-zinc-500">
               <span className="font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300">
                 RGB
@@ -246,7 +246,7 @@ export function ColorConverterTool() {
           </div>
 
           {/* HSL */}
-          <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col justify-between space-y-2">
+          <div className="p-4 rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] flex flex-col justify-between space-y-2">
             <div className="flex items-center justify-between text-xs text-zinc-500">
               <span className="font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300">
                 HSL
@@ -262,14 +262,14 @@ export function ColorConverterTool() {
 
       {/* WCAG Accessibility Contrast Checker */}
       {validRgb && (
-        <div className="p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50 space-y-3">
+        <div className="p-5 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/50 dark:bg-[#0B111A]/50 space-y-3">
           <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
             WCAG 2.1 Accessibility Contrast Ratings
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Against Black Text */}
-            <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-2">
+            <div className="p-4 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937] space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
                   On Black (#000000)
@@ -299,7 +299,7 @@ export function ColorConverterTool() {
             </div>
 
             {/* Against White Text */}
-            <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-2">
+            <div className="p-4 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937] space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
                   On White (#FFFFFF)
@@ -333,14 +333,14 @@ export function ColorConverterTool() {
 
       {/* Harmonic Palettes Preview */}
       {validHsl && (
-        <div className="p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50 space-y-3">
+        <div className="p-5 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/50 dark:bg-[#0B111A]/50 space-y-3">
           <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
             Harmonic Color Schemes
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {/* Complementary */}
-            <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-2">
+            <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937] space-y-2">
               <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
                 Complementary
               </span>
@@ -357,7 +357,7 @@ export function ColorConverterTool() {
             </div>
 
             {/* Analogous */}
-            <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-2">
+            <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937] space-y-2">
               <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
                 Analogous Pair
               </span>
@@ -377,7 +377,7 @@ export function ColorConverterTool() {
             </div>
 
             {/* Triadic */}
-            <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-2">
+            <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937] space-y-2">
               <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
                 Triadic Harmony
               </span>

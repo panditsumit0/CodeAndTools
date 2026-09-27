@@ -167,14 +167,14 @@ export function JwtDecoderTool() {
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 flex items-center gap-1.5">
-            <KeyRound className="w-3.5 h-3.5 text-emerald-500" />
+            <KeyRound className="w-3.5 h-3.5 text-primary" />
             Encoded JWT Token
           </label>
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={handleLoadSample}
-              className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline"
+              className="text-xs text-primary hover:underline"
             >
               Load Sample Token
             </button>
@@ -191,7 +191,7 @@ export function JwtDecoderTool() {
           </div>
         </div>
 
-        <div className="relative rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 overflow-hidden focus-within:ring-2 focus-within:ring-emerald-500/40">
+        <div className="relative rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50 dark:bg-[#0B111A] overflow-hidden focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary">
           <textarea
             value={tokenInput}
             onChange={(e) => setTokenInput(e.target.value)}
@@ -216,14 +216,14 @@ export function JwtDecoderTool() {
               className={`p-4 rounded-xl border flex items-center justify-between gap-3 text-xs sm:text-sm font-semibold ${
                 decoded.isExpired
                   ? 'bg-rose-500/10 border-rose-500/30 text-rose-600 dark:text-rose-400'
-                  : 'bg-emerald-500/10 border-emerald-500/30 text-emerald-600 dark:text-emerald-400'
+                  : 'bg-[#22C55E]/10 border-[#22C55E]/30 text-[#22C55E]'
               }`}
             >
               <div className="flex items-center gap-2.5">
                 {decoded.isExpired ? (
                   <XCircle className="w-5 h-5 text-rose-500 shrink-0" />
                 ) : (
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[#22C55E] shrink-0" />
                 )}
                 <span>
                   {decoded.isExpired
@@ -254,7 +254,7 @@ export function JwtDecoderTool() {
                   size="sm"
                 />
               </div>
-              <pre className="font-mono-code text-xs text-zinc-900 dark:text-zinc-100 bg-white dark:bg-zinc-900/90 p-3.5 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-x-auto">
+              <pre className="font-mono-code text-xs text-zinc-900 dark:text-zinc-100 bg-white dark:bg-[#0D1117]/90 p-3.5 rounded-lg border border-zinc-200 dark:border-[#1F2937] overflow-x-auto">
                 {JSON.stringify(decoded.header, null, 2)}
               </pre>
             </div>
@@ -270,7 +270,7 @@ export function JwtDecoderTool() {
                 </div>
                 <CopyButton text={decoded.signature} label="Copy" size="sm" />
               </div>
-              <div className="bg-white dark:bg-zinc-900/90 p-3.5 rounded-lg border border-zinc-200 dark:border-zinc-800 font-mono-code text-xs break-all text-zinc-700 dark:text-zinc-300">
+              <div className="bg-white dark:bg-[#0D1117]/90 p-3.5 rounded-lg border border-zinc-200 dark:border-[#1F2937] font-mono-code text-xs break-all text-zinc-700 dark:text-zinc-300">
                 {decoded.signature}
               </div>
               <p className="text-[11px] text-zinc-500 leading-relaxed">
@@ -298,7 +298,7 @@ export function JwtDecoderTool() {
                 size="sm"
               />
             </div>
-            <pre className="font-mono-code text-xs text-zinc-900 dark:text-zinc-100 bg-white dark:bg-zinc-900/90 p-4 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-x-auto leading-relaxed">
+            <pre className="font-mono-code text-xs text-zinc-900 dark:text-zinc-100 bg-white dark:bg-[#0D1117]/90 p-4 rounded-lg border border-zinc-200 dark:border-[#1F2937] overflow-x-auto leading-relaxed">
               {JSON.stringify(decoded.payload, null, 2)}
             </pre>
 

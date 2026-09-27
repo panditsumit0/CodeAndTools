@@ -180,13 +180,13 @@ export function JsonFormatterTool() {
   return (
     <div className="space-y-4">
       {/* Action Toolbar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200 dark:border-zinc-800">
+      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200 dark:border-[#1F2937]">
         <div className="flex flex-wrap items-center gap-2">
           {/* Format Button */}
           <button
             type="button"
             onClick={handleFormat}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
           >
             <Sparkles className="w-4 h-4" />
             <span>Format</span>
@@ -218,7 +218,7 @@ export function JsonFormatterTool() {
             <select
               value={indent}
               onChange={(e) => setIndent(e.target.value)}
-              className="bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 rounded-md px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-emerald-500"
+              className="bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 rounded-md px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-primary"
             >
               <option value={2}>2 spaces</option>
               <option value={4}>4 spaces</option>
@@ -232,7 +232,7 @@ export function JsonFormatterTool() {
           <button
             type="button"
             onClick={handleLoadSample}
-            className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline px-2 py-1"
+            className="text-xs text-primary hover:underline px-2 py-1"
           >
             Load Sample
           </button>
@@ -296,7 +296,7 @@ export function JsonFormatterTool() {
       )}
 
       {/* Code Editor */}
-      <div className="relative rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 overflow-hidden focus-within:ring-2 focus-within:ring-emerald-500/40">
+      <div className="relative rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50 dark:bg-[#0B111A] overflow-hidden focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary">
         <textarea
           value={input}
           onChange={(e) => {

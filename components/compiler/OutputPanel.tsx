@@ -22,7 +22,7 @@ export function OutputPanel({ isRunning, result, onClear }: OutputPanelProps) {
   const getStatusBadge = () => {
     if (isRunning) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 text-xs font-semibold">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20 text-xs font-semibold">
           <Loader2 className="w-3.5 h-3.5 animate-spin" />
           <span>Running...</span>
         </span>
@@ -40,42 +40,42 @@ export function OutputPanel({ isRunning, result, onClear }: OutputPanelProps) {
     switch (result.status) {
       case 'success':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#22C55E]/10 text-emerald-600 dark:text-[#22C55E] border border-emerald-500/20 text-xs font-semibold">
             <CheckCircle2 className="w-3.5 h-3.5" />
             <span>Execution Successful</span>
           </span>
         );
       case 'compilation_error':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 text-xs font-semibold">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#EF4444]/10 text-rose-600 dark:text-[#EF4444] border border-rose-500/20 text-xs font-semibold">
             <XCircle className="w-3.5 h-3.5" />
             <span>Compilation Error</span>
           </span>
         );
       case 'runtime_error':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 text-xs font-semibold">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#EF4444]/10 text-rose-600 dark:text-[#EF4444] border border-rose-500/20 text-xs font-semibold">
             <AlertTriangle className="w-3.5 h-3.5" />
             <span>Runtime Error</span>
           </span>
         );
       case 'timeout':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 text-xs font-semibold">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20 text-xs font-semibold">
             <Clock className="w-3.5 h-3.5" />
             <span>Time Limit Exceeded</span>
           </span>
         );
       case 'rate_limited':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 text-xs font-semibold">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20 text-xs font-semibold">
             <Clock className="w-3.5 h-3.5" />
             <span>Rate Limited</span>
           </span>
         );
       default:
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 text-xs font-semibold">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#EF4444]/10 text-rose-600 dark:text-[#EF4444] border border-rose-500/20 text-xs font-semibold">
             <XCircle className="w-3.5 h-3.5" />
             <span>Execution Error</span>
           </span>
@@ -88,15 +88,15 @@ export function OutputPanel({ isRunning, result, onClear }: OutputPanelProps) {
     : '';
 
   return (
-    <div className="flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-800 bg-[#0c1017] dark:bg-[#070a10] overflow-hidden shadow-inner">
+    <div className="flex flex-col rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-[#0c1017] dark:bg-[#05070A] overflow-hidden shadow-inner">
       {/* Terminal Title Bar */}
-      <div className="flex items-center justify-between px-3.5 py-2.5 border-b border-zinc-800 bg-zinc-900/80 text-xs">
+      <div className="flex items-center justify-between px-3.5 py-2.5 border-b border-[#1F2937] bg-[#0D1117] text-xs">
         <div className="flex items-center gap-2.5">
           {/* Traffic light terminal dots */}
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]/80" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/80" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#22C55E]/80" />
           </div>
           <span className="font-mono text-zinc-300 font-semibold pl-1">Output Console</span>
           {getStatusBadge()}
@@ -109,7 +109,7 @@ export function OutputPanel({ isRunning, result, onClear }: OutputPanelProps) {
               type="button"
               onClick={onClear}
               disabled={isRunning}
-              className="p-1 rounded text-zinc-400 hover:text-rose-400 transition-colors disabled:opacity-30"
+              className="p-1 rounded text-zinc-400 hover:text-[#EF4444] transition-colors disabled:opacity-30"
               title="Clear console"
             >
               <Trash2 className="w-3.5 h-3.5" />
@@ -134,7 +134,7 @@ export function OutputPanel({ isRunning, result, onClear }: OutputPanelProps) {
             {/* Standard Output */}
             {result.stdout && (
               <div>
-                <pre className="text-emerald-400 dark:text-emerald-300 whitespace-pre-wrap break-all font-mono-code">
+                <pre className="text-[#22C55E] dark:text-[#22C55E] whitespace-pre-wrap break-all font-mono-code">
                   {result.stdout}
                 </pre>
               </div>
@@ -143,7 +143,7 @@ export function OutputPanel({ isRunning, result, onClear }: OutputPanelProps) {
             {/* Standard Error / Diagnostic Output */}
             {result.stderr && (
               <div className="pt-1">
-                <pre className="text-rose-400 dark:text-rose-300 whitespace-pre-wrap break-all font-mono-code bg-rose-500/5 p-2 rounded-lg border border-rose-500/20">
+                <pre className="text-[#EF4444] dark:text-[#EF4444] whitespace-pre-wrap break-all font-mono-code bg-[#EF4444]/10 p-2 rounded-lg border border-[#EF4444]/25">
                   {result.stderr}
                 </pre>
               </div>
@@ -160,10 +160,10 @@ export function OutputPanel({ isRunning, result, onClear }: OutputPanelProps) {
 
       {/* Terminal Footer with Execution Metadata */}
       {result && !isRunning && (
-        <div className="px-3.5 py-1.5 border-t border-zinc-800/80 bg-zinc-900/60 flex flex-wrap items-center justify-between text-[11px] text-zinc-400 font-mono">
+        <div className="px-3.5 py-1.5 border-t border-[#1F2937] bg-[#0D1117] flex flex-wrap items-center justify-between text-[11px] text-zinc-400 font-mono">
           <div className="flex items-center gap-3">
             <span>
-              Exit Code: <strong className={result.exitCode === 0 ? 'text-emerald-400' : 'text-rose-400'}>{result.exitCode ?? 0}</strong>
+              Exit Code: <strong className={result.exitCode === 0 ? 'text-[#22C55E]' : 'text-[#EF4444]'}>{result.exitCode ?? 0}</strong>
             </span>
             {result.executionTime !== null && (
               <span>

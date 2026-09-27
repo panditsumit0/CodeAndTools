@@ -86,7 +86,7 @@ export function AIMessageBubble({ message, onRetry }: AIMessageBubbleProps) {
         <div className="max-w-[85%] bg-blue-600/20 border border-blue-500/30 rounded-2xl rounded-tr-sm px-4 py-3 text-sm text-zinc-100 leading-relaxed">
           <p className="whitespace-pre-wrap">{message.content}</p>
         </div>
-        <div className="w-8 h-8 rounded-full bg-zinc-700 border border-zinc-600 flex items-center justify-center shrink-0 mt-0.5">
+        <div className="w-8 h-8 rounded-full bg-[#151B24] border border-[#1F2937] flex items-center justify-center shrink-0 mt-0.5">
           <User className="w-4 h-4 text-zinc-300" />
         </div>
       </div>
@@ -145,11 +145,11 @@ export function AIMessageBubble({ message, onRetry }: AIMessageBubbleProps) {
   // ─── Assistant bubble ─────────────────────────────────────────────────────
   return (
     <div className="flex items-start gap-3">
-      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-orange-500 flex items-center justify-center shrink-0 mt-0.5 shadow-sm shadow-blue-500/20">
+      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6] flex items-center justify-center shrink-0 mt-0.5 shadow-sm shadow-purple-500/20">
         <Bot className="w-4 h-4 text-white" />
       </div>
 
-      <div className="flex-1 min-w-0 rounded-2xl rounded-tl-sm border px-4 py-3 text-sm leading-relaxed bg-zinc-900/80 border-zinc-700/60 text-zinc-100">
+      <div className="flex-1 min-w-0 rounded-2xl rounded-tl-sm border px-4 py-3 text-sm leading-relaxed bg-[#0D1117] border-[#312E81] text-[#F8FAFC]">
         {message.content ? (
           <>
             <div className="prose prose-invert prose-sm max-w-none
@@ -159,9 +159,9 @@ export function AIMessageBubble({ message, onRetry }: AIMessageBubbleProps) {
               prose-strong:text-zinc-100 prose-strong:font-semibold
               prose-ul:my-2 prose-li:my-0.5 prose-li:text-zinc-200
               prose-ol:my-2
-              prose-code:text-orange-300 prose-code:bg-zinc-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-xs prose-code:font-mono prose-code:before:content-none prose-code:after:content-none
+              prose-code:text-purple-300 prose-code:bg-[#151B24] prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-xs prose-code:font-mono prose-code:before:content-none prose-code:after:content-none
               prose-pre:my-3 prose-pre:bg-transparent prose-pre:p-0
-              prose-blockquote:border-blue-500 prose-blockquote:text-zinc-300
+              prose-blockquote:border-[#8B5CF6] prose-blockquote:text-zinc-300
             ">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
@@ -193,7 +193,7 @@ export function AIMessageBubble({ message, onRetry }: AIMessageBubbleProps) {
                         </div>
                         <pre
                           {...props}
-                          className="rounded-xl bg-zinc-950 border border-zinc-800 p-4 overflow-x-auto text-xs font-mono leading-relaxed"
+                          className="rounded-xl bg-[#080C12] border border-[#1F2937] p-4 overflow-x-auto text-xs font-mono leading-relaxed"
                         >
                           {children}
                         </pre>
@@ -209,15 +209,15 @@ export function AIMessageBubble({ message, onRetry }: AIMessageBubbleProps) {
             {/* Streaming indicator */}
             {message.isStreaming && (
               <span className="inline-flex items-center gap-1 mt-1">
-                <span className="w-1 h-3 bg-blue-400 rounded-full animate-pulse" />
-                <span className="w-1 h-3 bg-blue-400 rounded-full animate-pulse [animation-delay:150ms]" />
-                <span className="w-1 h-3 bg-blue-400 rounded-full animate-pulse [animation-delay:300ms]" />
+                <span className="w-1 h-3 bg-[#8B5CF6] rounded-full animate-pulse" />
+                <span className="w-1 h-3 bg-[#8B5CF6] rounded-full animate-pulse [animation-delay:150ms]" />
+                <span className="w-1 h-3 bg-[#8B5CF6] rounded-full animate-pulse [animation-delay:300ms]" />
               </span>
             )}
 
             {/* Actions bar — only shown when streaming is finished */}
             {!message.isStreaming && (
-              <div className="flex items-center gap-2 mt-3 pt-2 border-t border-zinc-700/40">
+              <div className="flex items-center gap-2 mt-3 pt-2 border-t border-[#1F2937]">
                 <button
                   onClick={handleCopyFull}
                   className="flex items-center gap-1.5 text-[11px] text-zinc-400 hover:text-zinc-200 transition-colors"
@@ -233,9 +233,9 @@ export function AIMessageBubble({ message, onRetry }: AIMessageBubbleProps) {
         ) : message.isStreaming ? (
           /* Empty content + still streaming → pulsing "Thinking…" indicator */
           <span className="inline-flex items-center gap-1">
-            <span className="w-1.5 h-4 bg-blue-400 rounded-full animate-pulse" />
-            <span className="w-1.5 h-4 bg-blue-400 rounded-full animate-pulse [animation-delay:150ms]" />
-            <span className="w-1.5 h-4 bg-blue-400 rounded-full animate-pulse [animation-delay:300ms]" />
+            <span className="w-1.5 h-4 bg-[#8B5CF6] rounded-full animate-pulse" />
+            <span className="w-1.5 h-4 bg-[#8B5CF6] rounded-full animate-pulse [animation-delay:150ms]" />
+            <span className="w-1.5 h-4 bg-[#8B5CF6] rounded-full animate-pulse [animation-delay:300ms]" />
           </span>
         ) : null}
       </div>

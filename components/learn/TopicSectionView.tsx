@@ -37,7 +37,7 @@ function InlineCopyButton({ text }: { text: string }) {
       className="p-1 rounded text-zinc-400 hover:text-zinc-200 hover:bg-zinc-700 transition-colors"
       title="Copy"
     >
-      {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+      {copied ? <Check className="w-3.5 h-3.5 text-[#22C55E]" /> : <Copy className="w-3.5 h-3.5" />}
     </button>
   );
 }
@@ -50,10 +50,10 @@ function CodeBlock({
 }) {
   const ext = language === 'cpp' ? 'cpp' : language === 'typescript' ? 'ts' : language === 'python' ? 'py' : language;
   return (
-    <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-950 overflow-hidden shadow-sm">
-      <div className="flex items-center justify-between px-4 py-2 bg-zinc-900/90 border-b border-zinc-800 text-xs">
+    <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-[#080C12] overflow-hidden shadow-sm">
+      <div className="flex items-center justify-between px-4 py-2 bg-zinc-100/90 dark:bg-[#090D14] border-b border-zinc-200 dark:border-[#1F2937] text-xs">
         <div className="flex items-center gap-2 text-zinc-300 font-mono">
-          <Code2 className="w-3.5 h-3.5 text-emerald-400" />
+          <Code2 className="w-3.5 h-3.5 text-[#22C55E]" />
           <span>{label || `example.${ext}`}</span>
         </div>
         <div className="flex items-center gap-2">
@@ -62,7 +62,7 @@ function CodeBlock({
             <button
               type="button"
               onClick={onRun}
-              className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg bg-[#22C55E] hover:bg-[#1da850] text-white transition-colors"
             >
               <Play className="w-3 h-3 fill-current" />
               ▶ Run
@@ -80,9 +80,9 @@ function CodeBlock({
 // ── Output block ─────────────────────────────────────────────────────────────
 function OutputBlock({ output }: { output: string }) {
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-3 text-xs font-mono">
+    <div className="rounded-xl border border-[#1F2937] bg-[#05070A] p-3 text-xs font-mono">
       <div className="flex items-center gap-1.5 text-zinc-400 mb-1 text-[11px] uppercase tracking-wider font-semibold">
-        <Terminal className="w-3 h-3 text-emerald-400" />
+        <Terminal className="w-3 h-3 text-[#22C55E]" />
         <span>Output:</span>
       </div>
       <pre className="text-zinc-300 whitespace-pre-wrap">{output}</pre>
@@ -93,7 +93,7 @@ function OutputBlock({ output }: { output: string }) {
 // ── Level badge ──────────────────────────────────────────────────────────────
 function LevelBadge({ level }: { level: 'Beginner' | 'Intermediate' | 'Advanced' }) {
   const styles = {
-    Beginner: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+    Beginner: 'bg-emerald-500/10 text-[#22C55E] border-emerald-500/20',
     Intermediate: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
     Advanced: 'bg-red-500/10 text-red-400 border-red-500/20',
   };
@@ -113,10 +113,10 @@ function CollapsibleSection({
 }) {
   const [open, setOpen] = useState(defaultOpen);
   const accentMap: Record<string, string> = {
-    blue: 'text-blue-400 border-blue-500/20 bg-blue-500/5',
-    emerald: 'text-emerald-400 border-emerald-500/20 bg-emerald-500/5',
-    amber: 'text-amber-400 border-amber-500/20 bg-amber-500/5',
-    purple: 'text-purple-400 border-purple-500/20 bg-purple-500/5',
+    blue: 'text-[#3B82F6] border-[#3B82F6]/30 bg-[#3B82F6]/5',
+    emerald: 'text-[#22C55E] border-emerald-500/20 bg-emerald-500/5',
+    amber: 'text-[#F97316] border-[#F97316]/30 bg-[#F97316]/5',
+    purple: 'text-[#8B5CF6] border-[#8B5CF6]/30 bg-[#8B5CF6]/5',
     red: 'text-red-400 border-red-500/20 bg-red-500/5',
     zinc: 'text-zinc-300 border-zinc-700 bg-zinc-800/40',
   };
@@ -143,13 +143,13 @@ function MCQCard({ mcq, index }: { mcq: MCQ; index: number }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [revealed, setRevealed] = useState(false);
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 space-y-3">
+    <div className="rounded-xl border border-[#1F2937] bg-[#0D1117] p-4 space-y-3">
       <p className="text-sm font-medium text-zinc-100">Q{index + 1}. {mcq.question}</p>
       <div className="space-y-2">
         {mcq.options.map(opt => {
           const isCorrect = opt.label === mcq.answer;
           const isSelected = selected === opt.label;
-          let cls = 'border-zinc-700 bg-zinc-800/60 text-zinc-300';
+          let cls = 'border-[#1F2937] bg-[#151B24] text-[#CBD5E1] hover:bg-[#1F2937]';
           if (revealed) {
             if (isCorrect) cls = 'border-emerald-500/50 bg-emerald-500/10 text-emerald-300';
             else if (isSelected) cls = 'border-red-500/50 bg-red-500/10 text-red-300';
@@ -179,8 +179,8 @@ function MCQCard({ mcq, index }: { mcq: MCQ; index: number }) {
           Check Answer
         </button>
       ) : (
-        <div className="p-2.5 rounded-lg bg-zinc-950 border border-zinc-700 text-xs text-zinc-300 space-y-1">
-          <p><span className="font-semibold text-emerald-400">✓ Answer: {mcq.answer}</span></p>
+        <div className="p-2.5 rounded-lg bg-[#05070A] border border-[#1F2937] text-xs text-[#CBD5E1] space-y-1">
+          <p><span className="font-semibold text-[#22C55E]">✓ Answer: {mcq.answer}</span></p>
           <p className="text-zinc-400">{mcq.explanation}</p>
         </div>
       )}
@@ -191,7 +191,7 @@ function MCQCard({ mcq, index }: { mcq: MCQ; index: number }) {
 // ── Status dot ───────────────────────────────────────────────────────────────
 function StatusBadge({ status }: { status: TopicStatus }) {
   if (status === 'done') return (
-    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#22C55E]">
       <CheckCircle2 className="w-3.5 h-3.5" /> Done
     </span>
   );
@@ -231,7 +231,7 @@ export function TopicSectionView({
   return (
     <section
       id={topic.id}
-      className="scroll-mt-24 pt-6 pb-10 border-b border-zinc-200 dark:border-zinc-800 last:border-b-0 space-y-5"
+      className="scroll-mt-24 pt-6 pb-10 border-b border-zinc-200 dark:border-[#1F2937] last:border-b-0 space-y-5"
     >
       {/* ── Header ── */}
       <div className="space-y-2">
@@ -243,7 +243,7 @@ export function TopicSectionView({
               </span>
               <StatusBadge status={status} />
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-[#F8FAFC]">
               {topic.title}
             </h3>
           </div>
@@ -253,7 +253,7 @@ export function TopicSectionView({
               <button
                 type="button"
                 onClick={() => onMarkDone(topic.id)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border border-emerald-500/30 text-[#22C55E] hover:bg-emerald-500/10 transition-colors"
               >
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 Mark Done
@@ -261,7 +261,7 @@ export function TopicSectionView({
             )}
           </div>
         </div>
-        <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed">
+        <p className="text-sm sm:text-base text-zinc-600 dark:text-[#CBD5E1] leading-relaxed">
           {exp?.intro || topic.summary}
         </p>
       </div>
@@ -300,7 +300,7 @@ export function TopicSectionView({
 
       {/* ── Memory Diagram ── */}
       {exp?.memoryDiagram && (
-        <div className="rounded-xl border border-zinc-700 bg-zinc-950 p-4">
+        <div className="rounded-xl border border-zinc-700 bg-[#080C12] border-[#1F2937] p-4">
           <p className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Memory / Diagram</p>
           <pre className="font-mono text-xs text-emerald-300 whitespace-pre overflow-x-auto leading-relaxed">
 {exp.memoryDiagram}
@@ -310,15 +310,15 @@ export function TopicSectionView({
 
       {/* ── Syntax ── */}
       {topic.syntax && (
-        <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/70 dark:bg-zinc-900/40 p-3 sm:p-4 space-y-2">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 block">
+        <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-100/70 dark:bg-[#0D1117] p-3 sm:p-4 space-y-2">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-500 dark:text-[#94A3B8] block">
             General Syntax
           </span>
-          <pre className="font-mono text-xs sm:text-sm text-zinc-800 dark:text-zinc-200 overflow-x-auto whitespace-pre leading-relaxed">
+          <pre className="font-mono text-xs sm:text-sm text-zinc-800 dark:text-[#E2E8F0] overflow-x-auto whitespace-pre leading-relaxed">
             {topic.syntax}
           </pre>
           {exp?.syntaxBreakdown && exp.syntaxBreakdown.length > 0 && (
-            <div className="mt-2 border-t border-zinc-200 dark:border-zinc-800 pt-2 space-y-1">
+            <div className="mt-2 border-t border-zinc-200 dark:border-[#1F2937] pt-2 space-y-1">
               {exp.syntaxBreakdown.map((item, i) => (
                 <div key={i} className="flex gap-2 text-xs">
                   <code className="font-mono text-orange-400 shrink-0 min-w-[90px]">{item.part}</code>
@@ -344,10 +344,10 @@ export function TopicSectionView({
 
       {/* ── Main Code Example ── */}
       <div className="space-y-2">
-        <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-950 overflow-hidden shadow-sm">
+        <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-950 overflow-hidden shadow-sm">
           <div className="flex items-center justify-between px-4 py-2 bg-zinc-900/90 border-b border-zinc-800 text-xs">
             <div className="flex items-center gap-2 text-zinc-300 font-mono">
-              <Code2 className="w-3.5 h-3.5 text-emerald-400" />
+              <Code2 className="w-3.5 h-3.5 text-[#22C55E]" />
               <span>example.{langExt} ({languageName})</span>
             </div>
             <div className="flex items-center gap-2">
@@ -367,7 +367,7 @@ export function TopicSectionView({
           </pre>
           <div className="border-t border-zinc-800 bg-zinc-900/60 p-3 text-xs font-mono">
             <div className="flex items-center gap-1.5 text-zinc-400 mb-1 text-[11px] uppercase tracking-wider font-semibold">
-              <Terminal className="w-3 h-3 text-emerald-400" />
+              <Terminal className="w-3 h-3 text-[#22C55E]" />
               <span>Expected Output:</span>
             </div>
             <pre className="text-zinc-300 whitespace-pre-wrap">{topic.expectedOutput}</pre>
@@ -397,7 +397,7 @@ export function TopicSectionView({
           <ol className="space-y-2">
             {exp.executionSteps.map((step, i) => (
               <li key={i} className="flex items-start gap-2.5 text-xs text-zinc-300">
-                <span className="shrink-0 w-5 h-5 rounded-full bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-[10px] font-bold border border-emerald-500/30 mt-0.5">
+                <span className="shrink-0 w-5 h-5 rounded-full bg-emerald-500/15 text-[#22C55E] flex items-center justify-center text-[10px] font-bold border border-emerald-500/30 mt-0.5">
                   {i + 1}
                 </span>
                 <span className="leading-relaxed">{step}</span>
@@ -460,13 +460,13 @@ export function TopicSectionView({
       {/* ── Key Points ── */}
       {exp?.keyPoints && exp.keyPoints.length > 0 && (
         <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/[0.04] p-4 space-y-2">
-          <p className="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+          <p className="text-xs font-bold text-[#22C55E] uppercase tracking-wider flex items-center gap-1.5">
             <Target className="w-3.5 h-3.5" /> Key Points to Remember
           </p>
           <ul className="space-y-1.5">
             {exp.keyPoints.map((pt, i) => (
               <li key={i} className="flex items-start gap-2 text-xs text-zinc-300">
-                <span className="text-emerald-400 font-bold shrink-0 mt-0.5">✓</span>
+                <span className="text-[#22C55E] font-bold shrink-0 mt-0.5">✓</span>
                 <span className="leading-relaxed">{pt}</span>
               </li>
             ))}

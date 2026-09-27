@@ -134,13 +134,13 @@ spec:
   return (
     <div className="space-y-4">
       {/* Top Action Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200 dark:border-zinc-800">
+      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200 dark:border-[#1F2937]">
         <div className="flex items-center gap-2">
           {/* Direction toggle button */}
           <button
             type="button"
             onClick={handleSwitchDirection}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
           >
             <ArrowRightLeft className="w-4 h-4" />
             <span>
@@ -178,7 +178,7 @@ spec:
           <button
             type="button"
             onClick={handleLoadSample}
-            className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline px-2 py-1"
+            className="text-xs text-primary hover:underline px-2 py-1"
           >
             Load Sample
           </button>
@@ -228,7 +228,7 @@ spec:
             <span>{input ? `${input.length} chars` : 'Empty'}</span>
           </div>
 
-          <div className="relative rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 overflow-hidden focus-within:ring-2 focus-within:ring-emerald-500/40">
+          <div className="relative rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50 dark:bg-[#0B111A] overflow-hidden focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary">
             <textarea
               value={input}
               onChange={(e) => handleInputChange(e.target.value)}
@@ -260,7 +260,7 @@ spec:
             </div>
           </div>
 
-          <div className="relative rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/70 dark:bg-zinc-950/80 overflow-hidden">
+          <div className="relative rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-100/70 dark:bg-[#0B111A]/80 overflow-hidden">
             <textarea
               value={output}
               readOnly

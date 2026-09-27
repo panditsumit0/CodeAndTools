@@ -18,7 +18,7 @@ export function ToolLayout({ tool, children }: ToolLayoutProps) {
       <ToolHeader tool={tool} />
 
       {/* Main Interactive Tool Workspace */}
-      <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/90 shadow-xl dark:shadow-2xl overflow-hidden p-4 sm:p-6 mb-8">
+      <div className="rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] shadow-xl dark:shadow-2xl overflow-hidden p-4 sm:p-6 mb-8">
         {children}
       </div>
 
@@ -28,15 +28,15 @@ export function ToolLayout({ tool, children }: ToolLayoutProps) {
       {/* Guide & Documentation Sections */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
         {/* How to use */}
-        <section className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/40">
+        <section className="p-6 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/70 dark:bg-[#090D14]">
           <div className="flex items-center gap-2 mb-4 text-zinc-900 dark:text-zinc-100 font-bold text-base sm:text-lg">
-            <ListOrdered className="w-5 h-5 text-emerald-500" />
+            <ListOrdered className="w-5 h-5 text-blue-500" />
             <h3>How to use {tool.name}</h3>
           </div>
           <ol className="space-y-3">
             {tool.howToUse.map((step, idx) => (
               <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
-                <span className="flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-xs shrink-0 mt-0.5 border border-emerald-500/20">
+                <span className="flex items-center justify-center w-5 h-5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold text-xs shrink-0 mt-0.5 border border-blue-500/20">
                   {idx + 1}
                 </span>
                 <span className="leading-relaxed">{step}</span>
@@ -46,15 +46,15 @@ export function ToolLayout({ tool, children }: ToolLayoutProps) {
         </section>
 
         {/* Features */}
-        <section className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/40">
+        <section className="p-6 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/70 dark:bg-[#090D14]">
           <div className="flex items-center gap-2 mb-4 text-zinc-900 dark:text-zinc-100 font-bold text-base sm:text-lg">
-            <Sparkles className="w-5 h-5 text-emerald-500" />
+            <Sparkles className="w-5 h-5 text-blue-500" />
             <h3>Key Features</h3>
           </div>
           <ul className="space-y-3">
             {tool.features.map((feature, idx) => (
               <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
                 <span className="leading-relaxed">{feature}</span>
               </li>
             ))}

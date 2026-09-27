@@ -32,15 +32,15 @@ export function CopyButton({ text, label = 'Copy', className = '', size = 'md' }
       disabled={!text}
       title={label}
       aria-label={label}
-      className={`inline-flex items-center gap-1.5 font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/40 disabled:opacity-40 disabled:cursor-not-allowed ${
+      className={`inline-flex items-center gap-1.5 font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/40 disabled:opacity-40 disabled:cursor-not-allowed ${
         copied
-          ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
-          : 'bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700/80 text-zinc-700 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/60'
+          ? 'bg-[#22C55E]/10 text-[#22C55E] border border-[#22C55E]/30'
+          : 'bg-zinc-100 hover:bg-zinc-200 dark:bg-[#151B24] dark:hover:bg-[#1F2937] text-zinc-700 dark:text-[#E2E8F0] border border-zinc-200 dark:border-[#1F2937]'
       } ${isSmall ? 'px-2 py-1 text-xs' : 'px-3 py-1.5 text-xs'} ${className}`}
     >
       {copied ? (
         <>
-          <Check className={`${isSmall ? 'w-3 h-3' : 'w-3.5 h-3.5'} text-emerald-500`} />
+          <Check className={`${isSmall ? 'w-3 h-3' : 'w-3.5 h-3.5'} text-[#22C55E]`} />
           <span>Copied!</span>
         </>
       ) : (

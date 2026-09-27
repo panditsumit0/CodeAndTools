@@ -100,7 +100,7 @@ export function Base64Tool() {
   return (
     <div className="space-y-4">
       {/* Control Toolbar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200 dark:border-zinc-800">
+      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200 dark:border-[#1F2937]">
         <div className="flex flex-wrap items-center gap-2">
           {/* Mode Switcher */}
           <div className="flex items-center p-0.5 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">
@@ -109,7 +109,7 @@ export function Base64Tool() {
               onClick={() => handleModeChange('encode')}
               className={`px-3 py-1 rounded-md text-xs sm:text-sm font-semibold transition-colors ${
                 mode === 'encode'
-                  ? 'bg-emerald-600 text-white shadow-sm'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
                   : 'text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white'
               }`}
             >
@@ -120,7 +120,7 @@ export function Base64Tool() {
               onClick={() => handleModeChange('decode')}
               className={`px-3 py-1 rounded-md text-xs sm:text-sm font-semibold transition-colors ${
                 mode === 'decode'
-                  ? 'bg-emerald-600 text-white shadow-sm'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
                   : 'text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white'
               }`}
             >
@@ -145,7 +145,7 @@ export function Base64Tool() {
               type="checkbox"
               checked={urlSafe}
               onChange={(e) => handleUrlSafeToggle(e.target.checked)}
-              className="rounded border-zinc-300 text-emerald-600 focus:ring-emerald-500"
+              className="rounded border-zinc-300 text-emerald-600 focus:ring-primary"
             />
             <span>URL-Safe (- and _)</span>
           </label>
@@ -155,7 +155,7 @@ export function Base64Tool() {
           <button
             type="button"
             onClick={handleLoadSample}
-            className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline px-2 py-1"
+            className="text-xs text-primary hover:underline px-2 py-1"
           >
             Load Sample
           </button>
@@ -182,7 +182,7 @@ export function Base64Tool() {
             <span>INPUT ({mode === 'encode' ? 'Plain Text / UTF-8' : 'Base64'})</span>
             <span>{input ? `${input.length} chars` : 'Empty'}</span>
           </div>
-          <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 overflow-hidden focus-within:ring-2 focus-within:ring-emerald-500/40">
+          <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50 dark:bg-[#0B111A] overflow-hidden focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary">
             <textarea
               value={input}
               onChange={(e) => handleInputChange(e.target.value)}
@@ -211,7 +211,7 @@ export function Base64Tool() {
               />
             </div>
           </div>
-          <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/70 dark:bg-zinc-950/80 overflow-hidden">
+          <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-100/70 dark:bg-[#0B111A]/80 overflow-hidden">
             <textarea
               value={output}
               readOnly

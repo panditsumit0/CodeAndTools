@@ -216,8 +216,8 @@ export function FileConverterWorkspace({
   return (
     <div className="space-y-6">
       {/* 1. Privacy Banner */}
-      <div className="flex items-center gap-2 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-800 dark:text-emerald-300 text-xs font-medium">
-        <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+      <div className="flex items-center gap-2 p-3 rounded-xl bg-blue-500/10 border border-blue-500/25 text-blue-800 dark:text-blue-300 text-xs font-medium">
+        <ShieldCheck className="w-4 h-4 text-blue-500 shrink-0" />
         <span>Your file is processed locally in your browser and is not uploaded to any server.</span>
       </div>
 
@@ -230,7 +230,7 @@ export function FileConverterWorkspace({
             handleFileChange(e.dataTransfer.files);
           }}
           onClick={() => fileInputRef.current?.click()}
-          className="border-2 border-dashed border-zinc-300 dark:border-zinc-700 hover:border-emerald-500 dark:hover:border-emerald-500 rounded-2xl p-8 sm:p-12 text-center cursor-pointer bg-zinc-50/50 dark:bg-zinc-900/40 transition-all hover:bg-emerald-500/[0.02]"
+          className="border-2 border-dashed border-zinc-300 dark:border-[#1F2937] hover:border-[#F97316]/60 dark:hover:border-[#F97316]/60 rounded-2xl p-8 sm:p-12 text-center cursor-pointer bg-zinc-50/50 dark:bg-[#0D1117] transition-all hover:bg-[#F97316]/[0.02]"
         >
           <input
             ref={fileInputRef}
@@ -240,21 +240,21 @@ export function FileConverterWorkspace({
             onChange={(e) => handleFileChange(e.target.files)}
             className="hidden"
           />
-          <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-4">
+          <div className="w-14 h-14 rounded-2xl bg-[#F97316]/10 text-[#F97316] flex items-center justify-center mx-auto mb-4">
             <Upload className="w-6 h-6 stroke-[2.2]" />
           </div>
           <h4 className="text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100">
-            Drop your file{isMultiple ? 's' : ''} here, or <span className="text-emerald-600 dark:text-emerald-400 underline">Browse</span>
+            Drop your file{isMultiple ? 's' : ''} here, or <span className="text-[#F97316] underline">Browse</span>
           </h4>
           <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1.5">
             Supported: {resolvedAccept} • Maximum file size: {formatBytes(getMaxSize())}
           </p>
         </div>
       ) : (
-        <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/40 p-4 sm:p-5 space-y-4">
+        <div className="rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/50 dark:bg-[#0D1117] p-4 sm:p-5 space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-500">
-              <FileText className="w-4 h-4 text-emerald-500" />
+              <FileText className="w-4 h-4 text-[#22C55E]" />
               <span>Selected File{files.length > 1 ? 's' : ''} ({files.length})</span>
             </div>
             <button
@@ -271,20 +271,20 @@ export function FileConverterWorkspace({
             {files.map((f, i) => (
               <div
                 key={i}
-                className="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-xs"
+                className="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937] text-xs"
               >
                 <div className="flex items-center gap-2.5 truncate">
                   <span className="font-semibold text-zinc-800 dark:text-zinc-200 truncate">{f.name}</span>
                   <span className="text-[11px] text-zinc-400 shrink-0">({formatBytes(f.size)})</span>
                 </div>
-                <FileCheck className="w-4 h-4 text-emerald-500 shrink-0 ml-2" />
+                <FileCheck className="w-4 h-4 text-[#22C55E] shrink-0 ml-2" />
               </div>
             ))}
           </div>
 
           {/* Converter-specific configuration options */}
           {type === 'image-to-pdf' && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-zinc-200 dark:border-zinc-800 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-zinc-200 dark:border-[#1F2937] text-xs">
               <div>
                 <label className="block text-zinc-700 dark:text-zinc-300 font-semibold mb-1">Page Orientation</label>
                 <select
@@ -295,7 +295,7 @@ export function FileConverterWorkspace({
                       orientation: e.target.value as ImageToPdfOptions['orientation'],
                     }))
                   }
-                  className="w-full p-2 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 text-xs focus:ring-2 focus:ring-emerald-500/40"
+                  className="w-full p-2 rounded-lg border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] text-zinc-800 dark:text-zinc-200 text-xs focus:ring-2 focus:ring-primary/40"
                 >
                   <option value="portrait">Portrait</option>
                   <option value="landscape">Landscape</option>
@@ -313,7 +313,7 @@ export function FileConverterWorkspace({
                       pageSize: e.target.value as ImageToPdfOptions['pageSize'],
                     }))
                   }
-                  className="w-full p-2 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 text-xs focus:ring-2 focus:ring-emerald-500/40"
+                  className="w-full p-2 rounded-lg border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] text-zinc-800 dark:text-zinc-200 text-xs focus:ring-2 focus:ring-primary/40"
                 >
                   <option value="a4">Standard A4</option>
                   <option value="fit">Fit to Image Size</option>
@@ -323,7 +323,7 @@ export function FileConverterWorkspace({
           )}
 
           {(type === 'png-to-jpg' || type === 'image-to-webp') && (
-            <div className="pt-2 border-t border-zinc-200 dark:border-zinc-800 space-y-1 text-xs">
+            <div className="pt-2 border-t border-zinc-200 dark:border-[#1F2937] space-y-1 text-xs">
               <div className="flex items-center justify-between font-semibold text-zinc-700 dark:text-zinc-300">
                 <span>Output Quality</span>
                 <span>{Math.round(quality * 100)}%</span>
@@ -335,13 +335,13 @@ export function FileConverterWorkspace({
                 step="0.05"
                 value={quality}
                 onChange={(e) => setQuality(parseFloat(e.target.value))}
-                className="w-full accent-emerald-500"
+                className="w-full accent-primary"
               />
             </div>
           )}
 
           {type === 'webp-converter' && (
-            <div className="pt-2 border-t border-zinc-200 dark:border-zinc-800 flex items-center gap-4 text-xs">
+            <div className="pt-2 border-t border-zinc-200 dark:border-[#1F2937] flex items-center gap-4 text-xs">
               <span className="font-semibold text-zinc-700 dark:text-zinc-300">Convert to:</span>
               <label className="flex items-center gap-1.5 cursor-pointer">
                 <input
@@ -349,7 +349,7 @@ export function FileConverterWorkspace({
                   name="webp-target"
                   checked={targetWebpFormat === 'image/png'}
                   onChange={() => setTargetWebpFormat('image/png')}
-                  className="accent-emerald-500"
+                  className="accent-primary"
                 />
                 <span>PNG (Lossless)</span>
               </label>
@@ -359,7 +359,7 @@ export function FileConverterWorkspace({
                   name="webp-target"
                   checked={targetWebpFormat === 'image/jpeg'}
                   onChange={() => setTargetWebpFormat('image/jpeg')}
-                  className="accent-emerald-500"
+                  className="accent-primary"
                 />
                 <span>JPG (Compact)</span>
               </label>
@@ -372,7 +372,7 @@ export function FileConverterWorkspace({
               type="button"
               onClick={handleConvert}
               disabled={isConverting}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/20 transition-all disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-sm bg-primary hover:bg-blue-500 text-white shadow-md shadow-blue-500/25 transition-all disabled:opacity-50"
             >
               {isConverting ? (
                 <>
@@ -388,16 +388,16 @@ export function FileConverterWorkspace({
             </button>
           ) : (
             <div className="space-y-3 pt-2">
-              <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-between text-xs">
-                <div className="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-semibold truncate">
-                  <FileCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+              <div className="p-3.5 rounded-xl bg-[#22C55E]/10 border border-[#22C55E]/25 flex items-center justify-between text-xs">
+                <div className="flex items-center gap-2 text-[#22C55E] font-semibold truncate">
+                  <FileCheck className="w-4 h-4 text-[#22C55E] shrink-0" />
                   <span className="truncate">Ready: {convertedFilename}</span>
                   <span className="text-[11px] text-zinc-400 font-mono">({formatBytes(convertedBlob.size)})</span>
                 </div>
                 <button
                   type="button"
                   onClick={handleDownload}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow-xs transition-colors shrink-0"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold text-xs bg-primary hover:bg-blue-500 text-white shadow-xs transition-colors shrink-0"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Download</span>
@@ -406,15 +406,15 @@ export function FileConverterWorkspace({
 
               {/* PDF to Text Preview Box */}
               {type === 'pdf-to-text' && extractedTextPreview && (
-                <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-4 text-xs space-y-2">
-                  <div className="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-2 text-[11px] font-semibold text-zinc-500">
+                <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-zinc-950 p-4 text-xs space-y-2">
+                  <div className="flex items-center justify-between border-b border-zinc-200 dark:border-[#1F2937] pb-2 text-[11px] font-semibold text-zinc-500">
                     <span>Extracted Text Preview</span>
                     <button
                       type="button"
                       onClick={handleCopyText}
-                      className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 hover:underline"
+                      className="inline-flex items-center gap-1 text-primary hover:underline"
                     >
-                      {copiedText ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
+                      {copiedText ? <Check className="w-3 h-3 text-[#22C55E]" /> : <Copy className="w-3 h-3" />}
                       <span>{copiedText ? 'Copied' : 'Copy Text'}</span>
                     </button>
                   </div>

@@ -67,7 +67,7 @@ export function UuidGeneratorTool() {
   return (
     <div className="space-y-6">
       {/* Configuration Toolbar */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800">
+      <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-[#0B111A] border border-zinc-200 dark:border-[#1F2937]">
         <div className="flex flex-wrap items-center gap-4">
           {/* Quantity selector */}
           <div className="flex items-center gap-2">
@@ -85,7 +85,7 @@ export function UuidGeneratorTool() {
                   }}
                   className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-colors ${
                     quantity === num
-                      ? 'bg-emerald-600 text-white shadow-sm'
+                      ? 'bg-primary text-primary-foreground shadow-sm'
                       : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
                   }`}
                 >
@@ -105,7 +105,7 @@ export function UuidGeneratorTool() {
                   setUppercase(e.target.checked);
                   handleRegenerate(quantity, e.target.checked, hyphens, braces);
                 }}
-                className="rounded border-zinc-300 text-emerald-600 focus:ring-emerald-500"
+                className="rounded border-zinc-300 text-emerald-600 focus:ring-primary"
               />
               <span>Uppercase</span>
             </label>
@@ -118,7 +118,7 @@ export function UuidGeneratorTool() {
                   setHyphens(e.target.checked);
                   handleRegenerate(quantity, uppercase, e.target.checked, braces);
                 }}
-                className="rounded border-zinc-300 text-emerald-600 focus:ring-emerald-500"
+                className="rounded border-zinc-300 text-emerald-600 focus:ring-primary"
               />
               <span>Hyphens</span>
             </label>
@@ -131,7 +131,7 @@ export function UuidGeneratorTool() {
                   setBraces(e.target.checked);
                   handleRegenerate(quantity, uppercase, hyphens, e.target.checked);
                 }}
-                className="rounded border-zinc-300 text-emerald-600 focus:ring-emerald-500"
+                className="rounded border-zinc-300 text-emerald-600 focus:ring-primary"
               />
               <span>Braces {`{}`}</span>
             </label>
@@ -142,7 +142,7 @@ export function UuidGeneratorTool() {
         <button
           type="button"
           onClick={() => handleRegenerate()}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
         >
           <RefreshCw className="w-4 h-4" />
           <span>Regenerate</span>
@@ -173,7 +173,7 @@ export function UuidGeneratorTool() {
       </div>
 
       {/* UUID List View */}
-      <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 overflow-hidden divide-y divide-zinc-200 dark:divide-zinc-800/80 max-h-[480px] overflow-y-auto">
+      <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50 dark:bg-[#0B111A] overflow-hidden divide-y divide-zinc-200 dark:divide-zinc-800/80 max-h-[480px] overflow-y-auto">
         {uuids.map((uuid, idx) => (
           <div
             key={idx}

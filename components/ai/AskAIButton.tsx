@@ -57,7 +57,7 @@ export function AskAIButton({ topic, language, contextDescription }: AskAIButton
     <div className="relative">
       <button
         onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-600/20 to-orange-500/10 border border-blue-500/30 text-blue-400 hover:text-blue-300 hover:border-blue-400/50 hover:from-blue-600/30 text-xs font-semibold transition-all shadow-sm shadow-blue-500/10"
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#8B5CF6]/20 to-[#3B82F6]/20 border border-[#8B5CF6]/30 text-[#8B5CF6] hover:text-[#a78bfa] hover:border-[#8B5CF6]/50 hover:from-[#8B5CF6]/30 text-xs font-semibold transition-all shadow-sm shadow-[#8B5CF6]/10"
       >
         <Sparkles className="w-3.5 h-3.5" />
         Ask AI
@@ -69,15 +69,15 @@ export function AskAIButton({ topic, language, contextDescription }: AskAIButton
           <div className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm" onClick={handleClose} />
 
           {/* Modal */}
-          <div className="fixed inset-x-4 bottom-4 sm:inset-auto sm:bottom-8 sm:right-8 sm:w-[420px] z-50 flex flex-col max-h-[80vh] rounded-2xl border border-zinc-700 bg-zinc-950 shadow-2xl shadow-black/60 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
+          <div className="fixed inset-x-4 bottom-4 sm:inset-auto sm:bottom-8 sm:right-8 sm:w-[420px] z-50 flex flex-col max-h-[80vh] rounded-2xl border border-[#1F2937] bg-[#070A0F] shadow-2xl shadow-black/60 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
             {/* Header */}
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-zinc-900/90 shrink-0">
-              <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-blue-600 to-orange-500 flex items-center justify-center">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-[#1F2937] bg-[#090D14] shrink-0">
+              <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6] flex items-center justify-center">
                 <Bot className="w-3.5 h-3.5 text-white" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-bold text-zinc-100">Ask AI about:</p>
-                <p className="text-[11px] text-blue-400 truncate">{topic} ({language.toUpperCase()})</p>
+                <p className="text-[11px] text-[#8B5CF6] truncate">{topic} ({language.toUpperCase()})</p>
               </div>
               <button
                 onClick={handleClose}
@@ -89,14 +89,14 @@ export function AskAIButton({ topic, language, contextDescription }: AskAIButton
 
             {/* Quick question chips */}
             {messages.length === 0 && (
-              <div className="p-3 border-b border-zinc-800 space-y-2 shrink-0">
+              <div className="p-3 border-b border-[#1F2937] space-y-2 shrink-0">
                 <p className="text-[11px] text-zinc-400 font-medium">Quick questions:</p>
                 <div className="space-y-1.5">
                   {quickQuestions.map(q => (
                     <button
                       key={q}
                       onClick={() => handleSend(q)}
-                      className="w-full text-left text-[11px] text-zinc-300 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 rounded-xl px-3 py-2 transition-all leading-snug"
+                      className="w-full text-left text-[11px] text-[#E2E8F0] bg-[#0D1117] hover:bg-[#151B24] border border-[#1F2937] hover:border-[#8B5CF6]/50 rounded-xl px-3 py-2 transition-all leading-snug"
                     >
                       {q}
                     </button>
@@ -114,8 +114,8 @@ export function AskAIButton({ topic, language, contextDescription }: AskAIButton
             </div>
 
             {/* Input */}
-            <div className="shrink-0 p-3 border-t border-zinc-800 bg-zinc-900/60">
-              <div className="flex items-center gap-2 p-2 rounded-xl border border-zinc-700 bg-zinc-900 focus-within:border-blue-500/60 transition-colors">
+            <div className="shrink-0 p-3 border-t border-[#1F2937] bg-[#090D14]">
+              <div className="flex items-center gap-2 p-2 rounded-xl border border-[#1F2937] bg-[#0B111A] focus-within:border-[#3B82F6] transition-colors">
                 <input
                   type="text"
                   value={input}
@@ -133,7 +133,7 @@ export function AskAIButton({ topic, language, contextDescription }: AskAIButton
                   <button
                     onClick={() => handleSend()}
                     disabled={!input.trim()}
-                    className="p-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white disabled:opacity-40 transition-colors"
+                    className="p-1.5 rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] hover:from-[#7c4def] hover:to-[#2563eb] text-white disabled:opacity-40 transition-all"
                   >
                     <Send className="w-3.5 h-3.5" />
                   </button>

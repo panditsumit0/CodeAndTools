@@ -108,7 +108,7 @@ export function UrlEncoderTool() {
   return (
     <div className="space-y-4">
       {/* Top Toolbar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200 dark:border-zinc-800">
+      <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-zinc-200 dark:border-[#1F2937]">
         <div className="flex flex-wrap items-center gap-2">
           {/* Encode / Decode Tabs */}
           <div className="flex items-center p-0.5 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">
@@ -117,7 +117,7 @@ export function UrlEncoderTool() {
               onClick={() => handleModeChange('encode')}
               className={`px-3 py-1 rounded-md text-xs sm:text-sm font-semibold transition-colors ${
                 mode === 'encode'
-                  ? 'bg-emerald-600 text-white shadow-sm'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
                   : 'text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white'
               }`}
             >
@@ -128,7 +128,7 @@ export function UrlEncoderTool() {
               onClick={() => handleModeChange('decode')}
               className={`px-3 py-1 rounded-md text-xs sm:text-sm font-semibold transition-colors ${
                 mode === 'decode'
-                  ? 'bg-emerald-600 text-white shadow-sm'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
                   : 'text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white'
               }`}
             >
@@ -143,7 +143,7 @@ export function UrlEncoderTool() {
               onClick={() => handleScopeChange('component')}
               className={`px-2.5 py-1 rounded-md font-medium transition-colors ${
                 scope === 'component'
-                  ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-xs'
+                  ? 'bg-white dark:bg-[#0D1117] text-zinc-900 dark:text-white shadow-xs'
                   : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white'
               }`}
               title="encodeURIComponent / decodeURIComponent (encodes :, /, ?, &, =)"
@@ -155,7 +155,7 @@ export function UrlEncoderTool() {
               onClick={() => handleScopeChange('full')}
               className={`px-2.5 py-1 rounded-md font-medium transition-colors ${
                 scope === 'full'
-                  ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-xs'
+                  ? 'bg-white dark:bg-[#0D1117] text-zinc-900 dark:text-white shadow-xs'
                   : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white'
               }`}
               title="encodeURI / decodeURI (preserves protocol, domain, and path structure)"
@@ -179,7 +179,7 @@ export function UrlEncoderTool() {
           <button
             type="button"
             onClick={handleLoadSample}
-            className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline px-2 py-1"
+            className="text-xs text-primary hover:underline px-2 py-1"
           >
             Load Sample
           </button>
@@ -206,7 +206,7 @@ export function UrlEncoderTool() {
             <span>INPUT ({mode === 'encode' ? 'Raw URL or Query Param' : 'Encoded URI'})</span>
             <span>{input ? `${input.length} chars` : 'Empty'}</span>
           </div>
-          <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 overflow-hidden focus-within:ring-2 focus-within:ring-emerald-500/40">
+          <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50 dark:bg-[#0B111A] overflow-hidden focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary">
             <textarea
               value={input}
               onChange={(e) => handleInputChange(e.target.value)}
@@ -224,7 +224,7 @@ export function UrlEncoderTool() {
             <span>OUTPUT ({mode === 'encode' ? 'Encoded URI' : 'Decoded String'})</span>
             <CopyButton text={output} label="Copy Output" size="sm" />
           </div>
-          <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/70 dark:bg-zinc-950/80 overflow-hidden">
+          <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-100/70 dark:bg-[#0B111A]/80 overflow-hidden">
             <textarea
               value={output}
               readOnly
@@ -239,7 +239,7 @@ export function UrlEncoderTool() {
 
       {/* Query Parameters Inspector Table */}
       {queryParams.length > 0 && (
-        <div className="mt-4 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50 space-y-3">
+        <div className="mt-4 p-4 rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/50 dark:bg-[#0B111A]/50 space-y-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs font-bold text-zinc-800 dark:text-zinc-200">
               <ListFilter className="w-4 h-4 text-emerald-500" />
@@ -247,9 +247,9 @@ export function UrlEncoderTool() {
             </div>
           </div>
 
-          <div className="overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+          <div className="overflow-x-auto rounded-lg border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117]">
             <table className="w-full text-left text-xs font-mono-code">
-              <thead className="bg-zinc-100/80 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 font-semibold border-b border-zinc-200 dark:border-zinc-800">
+              <thead className="bg-zinc-100/80 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 font-semibold border-b border-zinc-200 dark:border-[#1F2937]">
                 <tr>
                   <th className="py-2 px-3">Parameter (Key)</th>
                   <th className="py-2 px-3">Value</th>

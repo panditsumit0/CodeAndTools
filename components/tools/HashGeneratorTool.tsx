@@ -126,9 +126,9 @@ export function HashGeneratorTool() {
   return (
     <div className="space-y-6">
       {/* Privacy Callout */}
-      <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 text-xs sm:text-sm flex items-center justify-between gap-3">
+      <div className="p-3.5 rounded-xl border border-blue-500/30 bg-blue-500/10 text-blue-800 dark:text-blue-300 text-xs sm:text-sm flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <ShieldCheck className="w-5 h-5 text-emerald-500 shrink-0" />
+          <ShieldCheck className="w-5 h-5 text-primary shrink-0" />
           <span>
             <strong>100% Client-Side Cryptography:</strong> All hashes are computed locally via the browser Web Crypto API. Your passwords and sensitive strings are never sent over the network.
           </span>
@@ -139,14 +139,14 @@ export function HashGeneratorTool() {
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 flex items-center gap-1.5">
-            <Hash className="w-3.5 h-3.5 text-emerald-500" />
+            <Hash className="w-3.5 h-3.5 text-primary" />
             Plain Text String
           </label>
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={handleLoadSample}
-              className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline"
+              className="text-xs text-primary hover:underline"
             >
               Load Sample Text
             </button>
@@ -163,7 +163,7 @@ export function HashGeneratorTool() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 overflow-hidden focus-within:ring-2 focus-within:ring-emerald-500/40">
+        <div className="rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50 dark:bg-[#0B111A] overflow-hidden focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary">
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -185,7 +185,7 @@ export function HashGeneratorTool() {
               type="checkbox"
               checked={uppercase}
               onChange={(e) => setUppercase(e.target.checked)}
-              className="rounded border-zinc-300 text-emerald-600 focus:ring-emerald-500"
+              className="rounded border-zinc-300 text-emerald-600 focus:ring-primary"
             />
             <span>Uppercase Hex</span>
           </label>
@@ -202,7 +202,7 @@ export function HashGeneratorTool() {
           {algorithms.map((algo) => (
             <div
               key={algo.name}
-              className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-xs space-y-2"
+              className="p-4 rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] shadow-xs space-y-2"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -213,7 +213,7 @@ export function HashGeneratorTool() {
                     {algo.bits} bits
                   </span>
                   {algo.recommended && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 font-semibold">
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 font-semibold">
                       Recommended
                     </span>
                   )}
@@ -221,7 +221,7 @@ export function HashGeneratorTool() {
                 <CopyButton text={algo.value} label="Copy Hash" size="sm" />
               </div>
 
-              <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 font-mono-code text-xs text-zinc-800 dark:text-zinc-200 break-all select-all leading-relaxed">
+              <div className="p-3 rounded-lg bg-zinc-50 dark:bg-[#0B111A] border border-zinc-200 dark:border-[#1F2937] font-mono-code text-xs text-zinc-800 dark:text-zinc-200 break-all select-all leading-relaxed">
                 {algo.value || (
                   <span className="text-zinc-400 italic">Enter text above to compute hash...</span>
                 )}

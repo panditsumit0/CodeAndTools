@@ -89,7 +89,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`} data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col bg-white dark:bg-[#090d16] text-zinc-900 dark:text-zinc-100 antialiased selection:bg-emerald-500/20 selection:text-emerald-500">
+      <body className="min-h-screen flex flex-col bg-background text-foreground antialiased selection:bg-blue-500/25 selection:text-blue-400">
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
             <Navbar />

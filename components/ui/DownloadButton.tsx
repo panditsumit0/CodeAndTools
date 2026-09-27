@@ -35,7 +35,7 @@ export function DownloadButton({
       disabled={!content}
       title={label}
       aria-label={label}
-      className={`inline-flex items-center gap-1.5 font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/40 disabled:opacity-40 disabled:cursor-not-allowed bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700/80 text-zinc-700 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/60 ${
+      className={`inline-flex items-center gap-1.5 font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/40 disabled:opacity-40 disabled:cursor-not-allowed bg-zinc-100 hover:bg-zinc-200 dark:bg-[#151B24] dark:hover:bg-[#1F2937] text-zinc-700 dark:text-[#E2E8F0] border border-zinc-200 dark:border-[#1F2937] ${
         isSmall ? 'px-2 py-1 text-xs' : 'px-3 py-1.5 text-xs'
       } ${className}`}
     >

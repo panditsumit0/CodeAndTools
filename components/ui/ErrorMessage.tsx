@@ -18,20 +18,20 @@ export function ErrorMessage({
 
   const styles = {
     error: {
-      bg: 'bg-rose-500/10 border-rose-500/30 text-rose-600 dark:text-rose-400',
-      icon: <AlertCircle className="w-4 h-4 shrink-0 text-rose-500 mt-0.5" />,
+      bg: 'bg-[#EF4444]/10 border-[#EF4444]/30 text-[#EF4444]',
+      icon: <AlertCircle className="w-4 h-4 shrink-0 text-[#EF4444] mt-0.5" />,
     },
     warning: {
-      bg: 'bg-amber-500/10 border-amber-500/30 text-amber-600 dark:text-amber-400',
-      icon: <AlertTriangle className="w-4 h-4 shrink-0 text-amber-500 mt-0.5" />,
+      bg: 'bg-[#F97316]/10 border-[#F97316]/30 text-[#F97316]',
+      icon: <AlertTriangle className="w-4 h-4 shrink-0 text-[#F97316] mt-0.5" />,
     },
     info: {
-      bg: 'bg-sky-500/10 border-sky-500/30 text-sky-600 dark:text-sky-400',
-      icon: <Info className="w-4 h-4 shrink-0 text-sky-500 mt-0.5" />,
+      bg: 'bg-[#3B82F6]/10 border-[#3B82F6]/30 text-[#3B82F6]',
+      icon: <Info className="w-4 h-4 shrink-0 text-[#3B82F6] mt-0.5" />,
     },
     success: {
-      bg: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-600 dark:text-emerald-400',
-      icon: <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-500 mt-0.5" />,
+      bg: 'bg-[#22C55E]/10 border-[#22C55E]/30 text-[#22C55E]',
+      icon: <CheckCircle2 className="w-4 h-4 shrink-0 text-[#22C55E] mt-0.5" />,
     },
   }[type];
 

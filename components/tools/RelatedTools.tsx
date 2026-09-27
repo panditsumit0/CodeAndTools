@@ -19,7 +19,7 @@ export function RelatedTools({ currentSlug, relatedSlugs }: RelatedToolsProps) {
   }
 
   return (
-    <section className="mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800">
+    <section className="mt-12 pt-8 border-t border-zinc-200 dark:border-[#1F2937]">
       <div className="mb-6">
         <h3 className="text-lg font-bold text-zinc-900 dark:text-white">
           Related Developer Tools

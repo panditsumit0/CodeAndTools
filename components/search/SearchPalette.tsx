@@ -175,11 +175,11 @@ export function SearchPalette({ isOpen, onClose }: SearchPaletteProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-zinc-950/60 backdrop-blur-sm animate-in fade-in duration-150">
       <div
-        className="w-full max-w-2xl rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-2xl overflow-hidden flex flex-col max-h-[80vh] animate-in zoom-in-95 duration-150"
+        className="w-full max-w-2xl rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] shadow-2xl overflow-hidden flex flex-col max-h-[80vh] animate-in zoom-in-95 duration-150"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input Bar */}
-        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-zinc-200 dark:border-zinc-800">
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-zinc-200 dark:border-[#1F2937]">
           <Search className="w-5 h-5 text-zinc-400 shrink-0" />
           <input
             ref={inputRef}
@@ -225,17 +225,17 @@ export function SearchPalette({ isOpen, onClose }: SearchPaletteProps) {
                   onMouseEnter={() => setSelectedIndex(idx)}
                   className={`flex items-center justify-between p-3 rounded-xl cursor-pointer transition-colors ${
                     isSelected
-                      ? 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-950 dark:text-emerald-100'
-                      : 'hover:bg-zinc-100 dark:hover:bg-zinc-800/60 text-zinc-800 dark:text-zinc-200'
+                      ? 'bg-blue-50 dark:bg-[#172033] text-blue-950 dark:text-[#F8FAFC]'
+                      : 'hover:bg-zinc-100 dark:hover:bg-[#111827] text-zinc-800 dark:text-[#E2E8F0]'
                   }`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
                     <div
                       className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 ${
                         isSelected
-                          ? 'bg-emerald-500 text-white'
+                          ? 'bg-primary text-white'
                           : item.type === 'course'
-                          ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                          ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400'
                           : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
                       }`}
                     >
@@ -247,7 +247,7 @@ export function SearchPalette({ isOpen, onClose }: SearchPaletteProps) {
                         <span
                           className={`text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded border ${
                             item.type === 'course'
-                              ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20'
+                              ? 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20'
                               : item.type === 'topic'
                               ? 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/20'
                               : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-300 dark:border-zinc-700'
@@ -264,7 +264,7 @@ export function SearchPalette({ isOpen, onClose }: SearchPaletteProps) {
 
                   <div className="shrink-0 flex items-center gap-2 pl-3">
                     {isSelected && (
-                      <span className="text-xs text-emerald-600 dark:text-emerald-400 hidden sm:flex items-center gap-1 font-medium">
+                      <span className="text-xs text-blue-600 dark:text-blue-400 hidden sm:flex items-center gap-1 font-medium">
                         Open <CornerDownLeft className="w-3 h-3" />
                       </span>
                     )}
@@ -277,19 +277,19 @@ export function SearchPalette({ isOpen, onClose }: SearchPaletteProps) {
         </div>
 
         {/* Footer shortcuts */}
-        <div className="px-4 py-2.5 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/80 text-[11px] text-zinc-500 flex items-center justify-between">
+        <div className="px-4 py-2.5 border-t border-zinc-200 dark:border-[#1F2937] bg-zinc-50 dark:bg-[#090D14] text-[11px] text-[#94A3B8] flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span>
-              <kbd className="px-1 py-0.5 rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 font-mono">
+              <kbd className="px-1 py-0.5 rounded border border-zinc-300 dark:border-[#1F2937] bg-white dark:bg-[#151B24] text-zinc-600 dark:text-[#E2E8F0] font-mono">
                 ↑
               </kbd>{' '}
-              <kbd className="px-1 py-0.5 rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 font-mono">
+              <kbd className="px-1 py-0.5 rounded border border-zinc-300 dark:border-[#1F2937] bg-white dark:bg-[#151B24] text-zinc-600 dark:text-[#E2E8F0] font-mono">
                 ↓
               </kbd>{' '}
               Navigate
             </span>
             <span>
-              <kbd className="px-1.5 py-0.5 rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 font-mono">
+              <kbd className="px-1.5 py-0.5 rounded border border-zinc-300 dark:border-[#1F2937] bg-white dark:bg-[#151B24] text-zinc-600 dark:text-[#E2E8F0] font-mono">
                 ↵
               </kbd>{' '}
               Select

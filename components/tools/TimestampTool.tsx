@@ -105,11 +105,11 @@ export function TimestampTool() {
   return (
     <div className="space-y-8">
       {/* Live Current Timestamp Banner */}
-      <div className="p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-gradient-to-br from-emerald-500/5 via-transparent to-teal-500/5 dark:from-emerald-950/20 dark:to-zinc-900">
+      <div className="p-5 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-gradient-to-br from-blue-500/5 via-transparent to-cyan-500/5 dark:from-blue-950/20 dark:to-[#0D1117]">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+            <div className="flex items-center gap-2 text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-ping" />
               Live Epoch Clock
             </div>
             <div className="mt-1 flex items-baseline gap-3">
@@ -127,9 +127,9 @@ export function TimestampTool() {
             <button
               type="button"
               onClick={() => setIsPaused(!isPaused)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] text-xs font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
             >
-              {isPaused ? <Play className="w-3.5 h-3.5 text-emerald-500" /> : <Pause className="w-3.5 h-3.5 text-amber-500" />}
+              {isPaused ? <Play className="w-3.5 h-3.5 text-[#22C55E]" /> : <Pause className="w-3.5 h-3.5 text-[#F97316]" />}
               <span>{isPaused ? 'Resume' : 'Pause'}</span>
             </button>
             <CopyButton text={currentSec.toString()} label="Copy Seconds" />
@@ -141,16 +141,16 @@ export function TimestampTool() {
       {/* Two Way Converter Panels */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Panel 1: Unix Timestamp -> Date */}
-        <div className="p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-950/60 space-y-4">
+        <div className="p-5 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/60 dark:bg-[#0B111A]/60 space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-              <Clock className="w-4 h-4 text-emerald-500" />
+              <Clock className="w-4 h-4 text-primary" />
               Unix Timestamp → Human Date
             </h3>
             <button
               type="button"
               onClick={() => setEpochInput(Math.floor(Date.now() / 1000).toString())}
-              className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline"
+              className="text-xs text-primary hover:underline"
             >
               Set to Now
             </button>
@@ -163,12 +163,12 @@ export function TimestampTool() {
                 value={epochInput}
                 onChange={(e) => setEpochInput(e.target.value)}
                 placeholder="e.g. 1716300000"
-                className="flex-1 px-3.5 py-2 font-mono-code text-sm rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="flex-1 px-3.5 py-2 font-mono-code text-sm rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
               />
               <select
                 value={epochUnit}
                 onChange={(e) => setEpochUnit(e.target.value as 'seconds' | 'milliseconds')}
-                className="px-2.5 py-2 text-xs rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 focus:outline-none"
+                className="px-2.5 py-2 text-xs rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] text-zinc-800 dark:text-zinc-200 focus:outline-none"
               >
                 <option value="seconds">Seconds (10 digits)</option>
                 <option value="milliseconds">Milliseconds (13 digits)</option>
@@ -204,8 +204,8 @@ export function TimestampTool() {
 
           {/* Results Table */}
           {parsedEpochDate ? (
-            <div className="space-y-2.5 pt-2 border-t border-zinc-200 dark:border-zinc-800">
-              <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+            <div className="space-y-2.5 pt-2 border-t border-zinc-200 dark:border-[#1F2937]">
+              <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937]/80 flex items-center justify-between text-xs">
                 <div>
                   <span className="text-zinc-400 block mb-0.5 font-medium">UTC Time:</span>
                   <span className="font-semibold text-zinc-900 dark:text-zinc-100 font-mono">
@@ -215,7 +215,7 @@ export function TimestampTool() {
                 <CopyButton text={parsedEpochDate.utc} label="Copy" size="sm" />
               </div>
 
-              <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937]/80 flex items-center justify-between text-xs">
                 <div>
                   <span className="text-zinc-400 block mb-0.5 font-medium">Your Local Time:</span>
                   <span className="font-semibold text-zinc-900 dark:text-zinc-100 font-mono">
@@ -225,7 +225,7 @@ export function TimestampTool() {
                 <CopyButton text={parsedEpochDate.local} label="Copy" size="sm" />
               </div>
 
-              <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937]/80 flex items-center justify-between text-xs">
                 <div>
                   <span className="text-zinc-400 block mb-0.5 font-medium">ISO 8601:</span>
                   <span className="font-semibold text-zinc-900 dark:text-zinc-100 font-mono">
@@ -235,7 +235,7 @@ export function TimestampTool() {
                 <CopyButton text={parsedEpochDate.iso} label="Copy" size="sm" />
               </div>
 
-              <div className="text-xs text-emerald-600 dark:text-emerald-400 font-medium px-1">
+              <div className="text-xs text-primary font-medium px-1">
                 Relative: {parsedEpochDate.relative}
               </div>
             </div>
@@ -247,10 +247,10 @@ export function TimestampTool() {
         </div>
 
         {/* Panel 2: Human Date -> Unix Timestamp */}
-        <div className="p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-950/60 space-y-4">
+        <div className="p-5 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-zinc-50/60 dark:bg-[#0B111A]/60 space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-emerald-500" />
+              <Calendar className="w-4 h-4 text-primary" />
               Human Date → Unix Timestamp
             </h3>
             <button
@@ -260,7 +260,7 @@ export function TimestampTool() {
                 d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
                 setDateInput(d.toISOString().slice(0, 16));
               }}
-              className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline"
+              className="text-xs text-primary hover:underline"
             >
               Reset to Current
             </button>
@@ -271,24 +271,24 @@ export function TimestampTool() {
               type="datetime-local"
               value={dateInput}
               onChange={(e) => setDateInput(e.target.value)}
-              className="w-full px-3.5 py-2 font-mono-code text-sm rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+              className="w-full px-3.5 py-2 font-mono-code text-sm rounded-xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
             />
           </div>
 
           {/* Results Table */}
           {parsedDateToEpoch ? (
-            <div className="space-y-2.5 pt-2 border-t border-zinc-200 dark:border-zinc-800">
-              <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+            <div className="space-y-2.5 pt-2 border-t border-zinc-200 dark:border-[#1F2937]">
+              <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937]/80 flex items-center justify-between text-xs">
                 <div>
                   <span className="text-zinc-400 block mb-0.5 font-medium">Epoch (Seconds):</span>
-                  <span className="font-bold text-emerald-600 dark:text-emerald-400 font-mono text-sm">
+                  <span className="font-bold text-primary font-mono text-sm">
                     {parsedDateToEpoch.seconds}
                   </span>
                 </div>
                 <CopyButton text={parsedDateToEpoch.seconds} label="Copy" size="sm" />
               </div>
 
-              <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between text-xs">
+              <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937]/80 flex items-center justify-between text-xs">
                 <div>
                   <span className="text-zinc-400 block mb-0.5 font-medium">Epoch (Milliseconds):</span>
                   <span className="font-semibold text-zinc-900 dark:text-zinc-100 font-mono">
@@ -298,7 +298,7 @@ export function TimestampTool() {
                 <CopyButton text={parsedDateToEpoch.milliseconds} label="Copy" size="sm" />
               </div>
 
-              <div className="p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 text-xs text-zinc-600 dark:text-zinc-400 space-y-1">
+              <div className="p-3 rounded-xl bg-white dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937]/80 text-xs text-zinc-600 dark:text-zinc-400 space-y-1">
                 <div>
                   <strong className="text-zinc-800 dark:text-zinc-200">UTC:</strong> {parsedDateToEpoch.utc}
                 </div>

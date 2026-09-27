@@ -228,7 +228,7 @@ export function FileCompressorWorkspace({
         </div>
 
         {/* Privacy Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium self-start sm:self-auto">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium self-start sm:self-auto">
           <ShieldCheck className="w-4 h-4 shrink-0" />
           <span>Processed locally in browser &bull; Zero server upload</span>
         </div>
@@ -267,7 +267,7 @@ export function FileCompressorWorkspace({
               }}
             />
 
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4 shadow-inner">
+            <div className="w-16 h-16 rounded-2xl bg-primary/10 text-[#22D3EE] bg-[#22D3EE]/10 flex items-center justify-center mb-4 shadow-inner">
               {mode === "image" && <ImageIcon className="w-8 h-8" />}
               {mode === "pdf" && <FileText className="w-8 h-8" />}
               {mode === "zip" && <FileArchive className="w-8 h-8" />}
@@ -553,7 +553,7 @@ export function FileCompressorWorkspace({
                 <div className="p-3 rounded-xl bg-primary/10 border border-primary/20 space-y-1 text-xs">
                   <div className="flex justify-between font-semibold text-foreground">
                     <span>Total Saved</span>
-                    <span className="text-emerald-400">
+                    <span className="text-[#22C55E]">
                       {totalSavedPercent > 0 ? `${totalSavedPercent.toFixed(1)}%` : "0%"}
                     </span>
                   </div>
@@ -587,7 +587,7 @@ export function FileCompressorWorkspace({
                         </span>
                         <span
                           className={`font-semibold text-[11px] ${
-                            item.savedPercent > 0 ? "text-emerald-400" : "text-muted-foreground"
+                            item.savedPercent > 0 ? "text-[#22C55E]" : "text-muted-foreground"
                           }`}
                         >
                           {item.savedPercent > 0 ? `-${item.savedPercent.toFixed(1)}%` : "0%"}
@@ -621,7 +621,7 @@ export function FileCompressorWorkspace({
                     <span>PDF Size Reduction</span>
                     <span
                       className={
-                        pdfResult.savedPercent > 0 ? "text-emerald-400 font-bold" : "text-muted-foreground"
+                        pdfResult.savedPercent > 0 ? "text-[#22C55E] font-bold" : "text-muted-foreground"
                       }
                     >
                       {pdfResult.savedPercent > 0 ? `-${pdfResult.savedPercent.toFixed(1)}%` : "Already Optimized"}
@@ -638,7 +638,7 @@ export function FileCompressorWorkspace({
                       <span className="font-mono text-foreground">{formatBytes(pdfResult.compressedSize)}</span>
                     </div>
                     {pdfResult.savedBytes > 0 && (
-                      <div className="flex justify-between text-emerald-400">
+                      <div className="flex justify-between text-[#22C55E]">
                         <span>Space Saved:</span>
                         <span className="font-mono">{formatBytes(pdfResult.savedBytes)}</span>
                       </div>
@@ -671,7 +671,7 @@ export function FileCompressorWorkspace({
                 <div className="p-4 rounded-xl border border-border/60 bg-background/60 space-y-3 text-xs">
                   <div className="flex justify-between font-semibold text-foreground">
                     <span>ZIP Archive Ready</span>
-                    <span className="text-emerald-400 font-bold">
+                    <span className="text-[#22C55E] font-bold">
                       {zipResult.fileCount} {zipResult.fileCount === 1 ? "file" : "files"}
                     </span>
                   </div>
@@ -686,7 +686,7 @@ export function FileCompressorWorkspace({
                       <span className="font-mono text-foreground">{formatBytes(zipResult.zipSize)}</span>
                     </div>
                     {zipResult.savedBytes > 0 && (
-                      <div className="flex justify-between text-emerald-400">
+                      <div className="flex justify-between text-[#22C55E]">
                         <span>Deflate Savings:</span>
                         <span className="font-mono">
                           {formatBytes(zipResult.savedBytes)} ({zipResult.savedPercent.toFixed(1)}%)

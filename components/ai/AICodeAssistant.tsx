@@ -75,8 +75,8 @@ export function AICodeAssistant() {
                 onClick={() => setLanguage(lang)}
                 className={`px-3 py-1 rounded-lg text-xs font-medium border transition-all ${
                   language === lang
-                    ? 'bg-blue-600/20 border-blue-500/50 text-blue-300'
-                    : 'bg-zinc-800 border-zinc-700 text-zinc-400 hover:text-zinc-200 hover:border-zinc-600'
+                    ? 'bg-[#8B5CF6]/20 border-[#8B5CF6]/50 text-purple-300'
+                    : 'bg-[#151B24] border-[#1F2937] text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#8B5CF6]/40'
                 }`}
               >
                 {lang}
@@ -87,7 +87,7 @@ export function AICodeAssistant() {
 
         {/* Code input */}
         <div className="relative">
-          <div className="flex items-center justify-between px-3 py-2 bg-zinc-800 border border-zinc-700 border-b-0 rounded-t-xl">
+          <div className="flex items-center justify-between px-3 py-2 bg-[#0D1117] border border-[#1F2937] border-b-0 rounded-t-xl">
             <span className="text-[11px] font-mono font-medium text-zinc-400">Your code ({language})</span>
             <button onClick={() => setCode('')} className="text-[10px] text-zinc-500 hover:text-zinc-300">Clear</button>
           </div>
@@ -96,7 +96,7 @@ export function AICodeAssistant() {
             onChange={e => setCode(e.target.value)}
             placeholder={`Paste your ${language} code here...`}
             rows={12}
-            className="w-full font-mono text-xs text-zinc-100 bg-zinc-950 border border-zinc-700 rounded-b-xl px-4 py-3 resize-none outline-none focus:border-blue-500/50 transition-colors placeholder-zinc-600 leading-relaxed"
+            className="w-full font-mono text-xs text-zinc-100 bg-[#080C12] border border-[#1F2937] rounded-b-xl px-4 py-3 resize-none outline-none focus:border-primary transition-colors placeholder:text-[#64748B] text-[#F8FAFC] leading-relaxed"
           />
         </div>
 
@@ -110,8 +110,8 @@ export function AICodeAssistant() {
                 onClick={() => setSelectedAction(key)}
                 className={`flex flex-col items-start gap-1 p-3 rounded-xl border text-left transition-all ${
                   selectedAction === key
-                    ? 'bg-zinc-800 border-blue-500/50 shadow-sm shadow-blue-500/10'
-                    : 'bg-zinc-900 border-zinc-700/80 hover:border-zinc-600 hover:bg-zinc-800'
+                    ? 'bg-[#172033] border-[#8B5CF6]/60 shadow-sm shadow-purple-500/10'
+                    : 'bg-[#0D1117] border-[#1F2937] hover:border-[#8B5CF6]/40 hover:bg-[#151B24]'
                 }`}
               >
                 <Icon className={`w-4 h-4 ${color}`} />
@@ -151,7 +151,7 @@ export function AICodeAssistant() {
             value={customMessage}
             onChange={e => setCustomMessage(e.target.value)}
             placeholder="Optional: add specific instructions (e.g. focus on the sort function)"
-            className="w-full text-xs bg-zinc-900 border border-zinc-700 rounded-xl px-3 py-2 text-zinc-200 placeholder-zinc-500 outline-none focus:border-blue-500/50 transition-colors"
+            className="w-full text-xs bg-[#0B111A] border border-[#1F2937] rounded-xl px-3 py-2 text-[#F8FAFC] placeholder:text-[#64748B] outline-none focus:border-primary transition-colors"
           />
         </div>
 
@@ -159,7 +159,7 @@ export function AICodeAssistant() {
         <button
           onClick={handleRun}
           disabled={!code.trim() || isGenerating}
-          className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-semibold text-sm transition-all shadow-lg shadow-blue-600/20 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] hover:from-[#7c4def] hover:to-[#2563eb] text-white font-semibold text-sm transition-all shadow-lg shadow-purple-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isGenerating ? (
             <><StopCircle className="w-4 h-4" onClick={e => { e.stopPropagation(); stopGeneration(); }} />Generating...</>
@@ -170,9 +170,9 @@ export function AICodeAssistant() {
       </div>
 
       {/* Right: AI Response */}
-      <div className="flex flex-col min-h-[480px] bg-zinc-950 rounded-2xl border border-zinc-800 overflow-hidden">
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-zinc-900/80">
-          <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-blue-600 to-orange-500 flex items-center justify-center">
+      <div className="flex flex-col min-h-[480px] bg-[#070A0F] rounded-2xl border border-[#1F2937] overflow-hidden">
+        <div className="flex items-center gap-2 px-4 py-3 border-b border-[#1F2937] bg-[#090D14]">
+          <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6] flex items-center justify-center">
             <Bot className="w-3.5 h-3.5 text-white" />
           </div>
           <span className="text-xs font-bold text-zinc-200">AI Response</span>
@@ -199,7 +199,7 @@ export function AICodeAssistant() {
         </div>
 
         {isGenerating && (
-          <div className="shrink-0 p-3 border-t border-zinc-800">
+          <div className="shrink-0 p-3 border-t border-[#1F2937]">
             <button
               onClick={stopGeneration}
               className="w-full py-1.5 rounded-lg border border-red-500/30 text-red-400 text-xs hover:bg-red-900/20 transition-colors"

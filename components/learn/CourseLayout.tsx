@@ -38,16 +38,16 @@ export function CourseLayout({ course }: CourseLayoutProps) {
     <LearnLayout curriculum={curriculum}>
       {/* 1. Hero Header */}
       <div className="relative rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 p-6 sm:p-10 backdrop-blur-md overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
             <div className="flex items-center gap-2.5">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shadow-xs">
+              <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shadow-xs">
                 <DynamicIcon name={course.icon} className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xs uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400">
+                <span className="text-xs uppercase font-bold tracking-wider text-blue-600 dark:text-blue-400">
                   B.Tech Engineering Course
                 </span>
                 <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -61,7 +61,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
             </p>
 
             <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
-              <span className="px-2.5 py-1 rounded-full font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
+              <span className="px-2.5 py-1 rounded-full font-medium bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-emerald-500/20">
                 <strong>Difficulty:</strong> {course.difficulty}
               </span>
               <span className="px-2.5 py-1 rounded-full font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">
@@ -73,7 +73,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
           <div className="flex flex-col w-full sm:w-auto gap-2.5 shrink-0">
             <Link
               href={compilerUrl}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/20 transition-all hover:scale-[1.02]"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm bg-primary hover:bg-primary text-white shadow-md shadow-emerald-600/20 transition-all hover:scale-[1.02]"
             >
               <Play className="w-4 h-4 fill-current" />
               <span>▶ Open {course.name} Compiler</span>
@@ -83,15 +83,15 @@ export function CourseLayout({ course }: CourseLayoutProps) {
               href="#btech-priority"
               className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700/60 transition-colors"
             >
-              <GraduationCap className="w-4 h-4 text-emerald-500" />
+              <GraduationCap className="w-4 h-4 text-primary" />
               <span>B.Tech Exam & Viva Prep ↓</span>
             </a>
 
             <a
               href="#practice-questions"
-              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-500/20 transition-colors"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold border border-blue-500/30 bg-blue-500/10 text-blue-700 dark:text-blue-300 hover:bg-blue-500/20 transition-colors"
             >
-              <Code2 className="w-4 h-4 text-emerald-500" />
+              <Code2 className="w-4 h-4 text-primary" />
               <span>25+ Practice Questions ↓</span>
             </a>
           </div>
@@ -102,7 +102,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
       <div id="introduction" className="scroll-mt-24 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 sm:p-8 space-y-6">
         <div>
           <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-emerald-500" />
+            <Sparkles className="w-4 h-4 text-primary" />
             <span>Introduction to {course.name}</span>
           </h2>
           <p className="mt-2 text-sm sm:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed">
@@ -122,7 +122,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
             <ul className="space-y-1.5 text-xs sm:text-sm text-zinc-700 dark:text-zinc-300">
               {course.intro.whereUsed.map((u, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                  <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <span>{u}</span>
                 </li>
               ))}
@@ -135,7 +135,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
             </h3>
             <div className="space-y-2 text-xs sm:text-sm">
               <div>
-                <strong className="text-emerald-600 dark:text-emerald-400 block mb-1">Advantages:</strong>
+                <strong className="text-blue-600 dark:text-blue-400 block mb-1">Advantages:</strong>
                 <ul className="space-y-1 text-zinc-700 dark:text-zinc-300">
                   {course.intro.advantages.slice(0, 2).map((a, i) => (
                     <li key={i}>• {a}</li>
@@ -156,9 +156,9 @@ export function CourseLayout({ course }: CourseLayoutProps) {
 
         {/* Visual Callout Diagram if defined */}
         {course.visualCallout && (
-          <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/[0.04] p-4 sm:p-5 space-y-3">
+          <div className="rounded-xl border border-blue-500/30 bg-blue-500/[0.04] p-4 sm:p-5 space-y-3">
             <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-emerald-500" />
+              <Layers className="w-4 h-4 text-primary" />
               <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
                 {course.visualCallout.title}
               </h3>
@@ -175,7 +175,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-bold text-xs text-zinc-900 dark:text-zinc-100">{item.label}</span>
                     {item.badge && (
-                      <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                      <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400">
                         {item.badge}
                       </span>
                     )}
@@ -198,7 +198,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
           <div className="flex items-center gap-3 mb-2">
             <div className="flex-1 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
               <div
-                className="h-full bg-emerald-500 rounded-full transition-all duration-500"
+                className="h-full bg-primary rounded-full transition-all duration-500"
                 style={{ width: `${course.topics.length > 0 ? Math.round((doneCount / course.topics.length) * 100) : 0}%` }}
               />
             </div>
@@ -233,14 +233,14 @@ export function CourseLayout({ course }: CourseLayoutProps) {
       {/* 4. Section: Important for B.Tech Students */}
       <div
         id="btech-priority"
-        className="scroll-mt-24 rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/[0.05] via-zinc-50 to-white dark:from-emerald-950/20 dark:via-zinc-900 dark:to-zinc-900/60 p-6 sm:p-10 space-y-10 shadow-lg shadow-emerald-950/5"
+        className="scroll-mt-24 rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-500/[0.05] via-[#0D1117] to-[#0D1117] dark:from-blue-950/20 dark:via-[#0D1117] dark:to-[#0D1117] p-6 sm:p-10 space-y-10 shadow-lg shadow-emerald-950/5"
       >
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shadow-md shadow-emerald-600/30">
+          <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center shadow-md shadow-blue-500/30">
             <GraduationCap className="w-6 h-6" />
           </div>
           <div>
-            <span className="text-xs uppercase font-bold tracking-wider text-emerald-600 dark:text-emerald-400">
+            <span className="text-xs uppercase font-bold tracking-wider text-blue-600 dark:text-blue-400">
               Exam & Placement Accelerator
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-zinc-50">
@@ -254,13 +254,13 @@ export function CourseLayout({ course }: CourseLayoutProps) {
           {/* Semester Exams High Priority */}
           <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 p-5 space-y-3">
             <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-full bg-primary" />
               <span>High Priority Semester Exam Topics</span>
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-zinc-600 dark:text-zinc-300">
               {course.bTechPriority.semesterExams.map((topic, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">✓</span>
+                  <span className="text-primary font-bold shrink-0">✓</span>
                   <span>{topic}</span>
                 </li>
               ))}
@@ -287,7 +287,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
         {/* B. Viva Voce Questions & Answers */}
         <div className="space-y-4">
           <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-            <HelpCircle className="w-4 h-4 text-emerald-500" />
+            <HelpCircle className="w-4 h-4 text-primary" />
             <span>Top University Lab Viva Voce Questions & Model Answers</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -297,7 +297,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
                 className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/90 dark:bg-zinc-900/90 p-4 space-y-2"
               >
                 <div className="flex items-start gap-2">
-                  <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                  <span className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 bg-blue-500/10 px-1.5 py-0.5 rounded">
                     Q{i + 1}
                   </span>
                   <h4 className="text-xs sm:text-sm font-bold text-zinc-900 dark:text-zinc-100">
@@ -351,7 +351,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
               <Link
                 key={lang}
                 href={`/learn/${lang}`}
-                className="px-3 py-1.5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-xs font-semibold text-zinc-700 dark:text-zinc-300 hover:border-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                className="px-3 py-1.5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-xs font-semibold text-zinc-700 dark:text-zinc-300 hover:border-primary hover:text-primary transition-colors"
               >
                 Learn {lang.toUpperCase()} &rarr;
               </Link>
@@ -361,7 +361,7 @@ export function CourseLayout({ course }: CourseLayoutProps) {
         <div className="pt-2 border-t border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between">
           <Link
             href="/learn"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors"
           >
             <span>Compare with other languages</span>
             <ArrowRight className="w-4 h-4" />

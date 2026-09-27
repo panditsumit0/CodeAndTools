@@ -44,7 +44,7 @@ export function PracticeCard({ practice, languageId }: PracticeCardProps) {
       <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
         <div className="flex items-center gap-2">
           <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 flex items-center gap-1.5">
-            <HelpCircle className="w-3.5 h-3.5 text-emerald-500" />
+            <HelpCircle className="w-3.5 h-3.5 text-[#22C55E]" />
             Practice Problem
           </span>
           <span
@@ -57,7 +57,7 @@ export function PracticeCard({ practice, languageId }: PracticeCardProps) {
         <button
           type="button"
           onClick={() => handleOpenInCompiler(practice.starterCode, practice.question)}
-          className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-xs transition-colors"
+          className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg bg-primary hover:bg-blue-500 text-white shadow-xs transition-colors"
         >
           <Play className="w-3 h-3 fill-current" />
           <span>Try in Compiler</span>
@@ -85,7 +85,7 @@ export function PracticeCard({ practice, languageId }: PracticeCardProps) {
           onClick={() => setShowSolution((prev) => !prev)}
           className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-md border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-700/80 transition-colors"
         >
-          <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+          <CheckCircle2 className="w-3 h-3 text-[#22C55E]" />
           <span>{showSolution ? 'Hide Solution' : 'Show Solution'}</span>
           {showSolution ? <ChevronUp className="w-3 h-3 ml-0.5" /> : <ChevronDown className="w-3 h-3 ml-0.5" />}
         </button>
@@ -107,7 +107,7 @@ export function PracticeCard({ practice, languageId }: PracticeCardProps) {
             <button
               type="button"
               onClick={() => handleOpenInCompiler(practice.solution, `Solution: ${practice.question}`)}
-              className="text-emerald-400 hover:underline inline-flex items-center gap-1"
+              className="text-primary hover:underline inline-flex items-center gap-1"
             >
               <Play className="w-2.5 h-2.5 fill-current" /> Run Solution
             </button>

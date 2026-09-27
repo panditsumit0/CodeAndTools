@@ -33,7 +33,7 @@ export function CurriculumSidebar({
           type="button"
           onClick={onToggle}
           title="Open Curriculum Sidebar"
-          className="p-2.5 rounded-xl border border-border/80 bg-card/80 hover:bg-card text-foreground shadow-sm hover:border-primary/50 transition-all flex flex-col items-center gap-1 group"
+          className="p-2.5 rounded-xl border border-[#1F2937] bg-[#090D14] hover:bg-[#111827] text-[#E2E8F0] shadow-sm hover:border-primary/50 transition-all flex flex-col items-center gap-1 group"
         >
           <PanelLeft className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
           <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground group-hover:text-primary write-vertical">
@@ -46,9 +46,9 @@ export function CurriculumSidebar({
 
   return (
     <aside className="hidden lg:block w-72 shrink-0 sticky top-20 z-20 max-h-[calc(100vh-6rem)] transition-all duration-300">
-      <div className="rounded-2xl border border-border/80 bg-card/90 backdrop-blur-md shadow-sm flex flex-col max-h-[calc(100vh-6rem)] overflow-hidden">
+      <div className="rounded-2xl border border-[#1F2937] bg-[#090D14] shadow-lg shadow-black/40 flex flex-col max-h-[calc(100vh-6rem)] overflow-hidden">
         {/* Sidebar Header */}
-        <div className="p-4 border-b border-border/70 flex items-center justify-between">
+        <div className="p-4 border-b border-[#1F2937] bg-[#090D14] flex items-center justify-between">
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-primary" />
             <span className="text-xs font-bold uppercase tracking-wider text-foreground">
@@ -66,7 +66,7 @@ export function CurriculumSidebar({
         </div>
 
         {/* Subtitle / Topic Counter */}
-        <div className="px-4 py-2 bg-muted/30 border-b border-border/50 text-[11px] text-muted-foreground flex justify-between">
+        <div className="px-4 py-2 bg-[#070A0F] border-b border-[#1F2937] text-[11px] text-[#94A3B8] flex justify-between">
           <span>{curriculum.title}</span>
           <span className="font-mono">{curriculum.sections.length} sections</span>
         </div>
@@ -86,7 +86,7 @@ export function CurriculumSidebar({
         </div>
 
         {/* Bottom Compiler Action */}
-        <div className="p-3 border-t border-border/70 bg-muted/20">
+        <div className="p-3 border-t border-[#1F2937] bg-[#090D14]">
           <Link
             href={compilerUrl}
             className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-bold bg-primary hover:bg-primary/90 text-primary-foreground transition-all shadow-sm shadow-primary/20"

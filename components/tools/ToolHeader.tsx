@@ -30,7 +30,7 @@ export function ToolHeader({ tool }: ToolHeaderProps) {
       {/* Main Header & Title */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-start sm:items-center gap-3.5">
-          <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex items-center justify-center shrink-0 shadow-sm">
+          <div className="w-12 h-12 rounded-2xl bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/20 flex items-center justify-center shrink-0 shadow-sm">
             <DynamicIcon name={tool.icon} className="w-6 h-6" />
           </div>
           <div>
@@ -55,8 +55,8 @@ export function ToolHeader({ tool }: ToolHeaderProps) {
             <span>Sandboxed Execution</span>
           </div>
         ) : (
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-300 text-xs font-medium shrink-0 self-start sm:self-auto">
-            <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-500/10 border border-blue-500/25 text-blue-700 dark:text-blue-300 text-xs font-medium shrink-0 self-start sm:self-auto">
+            <ShieldCheck className="w-4 h-4 text-blue-500 shrink-0" />
             <span>Runs 100% in browser</span>
           </div>
         )}
@@ -71,8 +71,8 @@ export function ToolHeader({ tool }: ToolHeaderProps) {
           </span>
         </div>
       ) : (
-        <div className="text-xs text-zinc-500 dark:text-zinc-400 bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 rounded-xl px-3.5 py-2 flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+        <div className="text-xs text-zinc-500 dark:text-zinc-400 bg-zinc-50 dark:bg-[#0D1117] border border-zinc-200 dark:border-[#1F2937] rounded-xl px-3.5 py-2 flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse shrink-0" />
           <span>
             <strong>Privacy guarantee:</strong> Your data stays in your browser. Nothing is uploaded to our servers.
           </span>

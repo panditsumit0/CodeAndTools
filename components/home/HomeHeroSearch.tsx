@@ -49,11 +49,11 @@ export function HomeHeroSearch() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search 10+ developer tools (e.g. JWT, JSON, UUID, Hash, Regex)..."
-          className="w-full pl-12 pr-28 py-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-xl text-sm sm:text-base text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all"
+          className="w-full pl-12 pr-28 py-4 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-white/90 dark:bg-[#0D1117]/90 backdrop-blur-md shadow-xl text-sm sm:text-base text-zinc-900 dark:text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/40 transition-all"
         />
         <button
           type="submit"
-          className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md"
+          className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-2 rounded-xl bg-primary hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-blue-500/25"
         >
           Search
         </button>
@@ -77,7 +77,7 @@ export function HomeHeroSearch() {
                 router.push(`/tools?search=${encodeURIComponent(item)}`);
               }
             }}
-            className="px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-300 transition-colors"
+            className="px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-[#151B24] border border-transparent dark:border-[#1F2937] hover:bg-zinc-200 dark:hover:bg-[#1F2937] text-zinc-600 dark:text-[#E2E8F0] transition-colors"
           >
             {item}
           </button>

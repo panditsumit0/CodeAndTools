@@ -18,14 +18,14 @@ export function AIChatPage() {
   return (
     <div className="space-y-4">
       {/* Tab selector */}
-      <div className="flex gap-2 p-1 bg-zinc-100 dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 w-fit mx-auto">
+      <div className="flex gap-2 p-1 bg-zinc-100 dark:bg-[#151B24] rounded-xl border border-zinc-200 dark:border-[#1F2937] w-fit mx-auto">
         {TABS.map(({ id, label, icon: Icon }) => (
           <button
             key={id}
             onClick={() => setActiveTab(id)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
               activeTab === id
-                ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm'
+                ? 'bg-white dark:bg-[#0D1117] text-zinc-900 dark:text-[#F8FAFC] shadow-sm'
                 : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200'
             }`}
           >
@@ -74,11 +74,11 @@ export function AIChatPage() {
         ].map(({ icon, title, desc }) => (
           <div
             key={title}
-            className="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 space-y-2"
+            className="p-4 rounded-2xl border border-zinc-200 dark:border-[#1F2937] bg-white dark:bg-[#0D1117] space-y-2"
           >
             <div className="text-2xl">{icon}</div>
             <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+              <Sparkles className="w-3.5 h-3.5 text-[#8B5CF6]" />
               {title}
             </h3>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">{desc}</p>
