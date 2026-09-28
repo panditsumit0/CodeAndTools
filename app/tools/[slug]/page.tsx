@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { TOOLS, getToolBySlug } from "@/lib/tools-registry";
 import { ToolLayout } from "@/components/tools/ToolLayout";
+
+// Core Tools
 import { JsonFormatterTool } from "@/components/tools/JsonFormatterTool";
 import { JsonYamlTool } from "@/components/tools/JsonYamlTool";
 import { JwtDecoderTool } from "@/components/tools/JwtDecoderTool";
@@ -14,6 +16,76 @@ import { RegexTesterTool } from "@/components/tools/RegexTesterTool";
 import { HashGeneratorTool } from "@/components/tools/HashGeneratorTool";
 import { ColorConverterTool } from "@/components/tools/ColorConverterTool";
 import { Compiler } from "@/components/compiler/Compiler";
+
+// Compressors and Converters
+import { FileCompressorWorkspace, type CompressorMode } from "@/components/compressors/FileCompressorWorkspace";
+import { FileConverterWorkspace, type ConverterMode } from "@/components/converters/FileConverterWorkspace";
+
+// Text Tools
+import {
+  WordCounterTool,
+  CaseConverterTool,
+  WhitespaceCleanerTool,
+  LoremIpsumTool,
+  MarkdownPreviewTool,
+  DiffCheckerTool,
+} from "@/components/tools/TextTools";
+
+// Data Tools
+import {
+  JsonValidatorTool,
+  JsonMinifierTool,
+  JsonToCsvTool,
+  CsvToJsonTool,
+  XmlFormatterTool,
+} from "@/components/tools/DataTools";
+
+// Security Tools
+import {
+  PasswordGeneratorTool,
+  JwtGeneratorTool,
+  RandomTokenTool,
+  ChecksumGeneratorTool,
+} from "@/components/tools/SecurityTools";
+
+// Web Dev Tools
+import {
+  MetaTagGeneratorTool,
+  RobotsTxtGeneratorTool,
+  UrlParserTool,
+  HttpStatusCodeTool,
+  UserAgentParserTool,
+  MimeTypesTool,
+  QrGeneratorTool,
+  SqlFormatterTool,
+} from "@/components/tools/WebDevTools";
+
+// Time & Date Tools
+import {
+  DateDifferenceTool,
+  CronExplainerTool,
+} from "@/components/tools/TimeTools";
+
+// Math & Number Tools
+import {
+  UnitConverterTool,
+  NumberSystemConverterTool,
+  PercentageCalculatorTool,
+} from "@/components/tools/MathTools";
+
+// Student Essentials Tools
+import {
+  GitCheatsheetTool,
+  LinuxCheatsheetTool,
+  AsciiTableTool,
+} from "@/components/tools/StudentTools";
+
+// AI Tools
+import {
+  AiCodeExplainerTool,
+  AiRegexExplainerTool,
+} from "@/components/tools/AiTools";
+
 import {
   buildMetadata,
   getSoftwareApplicationJsonLd,
@@ -79,6 +151,7 @@ export default async function ToolDetailPage({ params }: PageProps) {
 
   const renderToolComponent = () => {
     switch (tool.slug) {
+      // Existing Core Tools
       case "json-formatter":
         return <JsonFormatterTool />;
       case "json-yaml":
@@ -100,9 +173,133 @@ export default async function ToolDetailPage({ params }: PageProps) {
       case "color-converter":
         return <ColorConverterTool />;
       case "compiler":
+      case "c-compiler":
+      case "cpp-compiler":
+      case "java-compiler":
+      case "python-compiler":
+      case "typescript-playground":
         return <Compiler />;
+
+      // Converters & Compressors
+      case "pdf-to-word":
+      case "word-to-pdf":
+      case "pdf-to-text":
+      case "image-to-pdf":
+      case "jpg-to-png":
+      case "png-to-jpg":
+      case "webp-converter":
+      case "image-to-webp":
+        return (
+          <FileConverterWorkspace
+            mode={tool.slug as ConverterMode}
+            toolName={tool.name}
+            toolDescription={tool.shortDescription}
+          />
+        );
+      case "image":
+      case "pdf":
+      case "zip":
+        return (
+          <FileCompressorWorkspace
+            mode={tool.slug as CompressorMode}
+            toolName={tool.name}
+            toolDescription={tool.shortDescription}
+          />
+        );
+
+      // Text Tools
+      case "word-counter":
+      case "character-counter":
+        return <WordCounterTool />;
+      case "case-converter":
+        return <CaseConverterTool />;
+      case "whitespace-cleaner":
+      case "duplicate-line-remover":
+      case "text-sorter":
+        return <WhitespaceCleanerTool />;
+      case "lorem-ipsum":
+        return <LoremIpsumTool />;
+      case "markdown-preview":
+        return <MarkdownPreviewTool />;
+      case "diff-checker":
+        return <DiffCheckerTool />;
+
+      // JSON & Data Tools
+      case "json-validator":
+        return <JsonValidatorTool />;
+      case "json-minifier":
+        return <JsonMinifierTool />;
+      case "json-to-csv":
+        return <JsonToCsvTool />;
+      case "csv-to-json":
+        return <CsvToJsonTool />;
+      case "xml-formatter":
+        return <XmlFormatterTool />;
+
+      // Security Tools
+      case "password-generator":
+        return <PasswordGeneratorTool />;
+      case "jwt-generator":
+        return <JwtGeneratorTool />;
+      case "random-token-generator":
+        return <RandomTokenTool />;
+      case "checksum-generator":
+        return <ChecksumGeneratorTool />;
+
+      // Web Dev Tools
+      case "meta-tag-generator":
+        return <MetaTagGeneratorTool />;
+      case "robots-txt-generator":
+        return <RobotsTxtGeneratorTool />;
+      case "url-parser":
+        return <UrlParserTool />;
+      case "http-status-codes":
+        return <HttpStatusCodeTool />;
+      case "user-agent-parser":
+        return <UserAgentParserTool />;
+      case "mime-types":
+        return <MimeTypesTool />;
+      case "qr-generator":
+        return <QrGeneratorTool />;
+      case "sql-formatter":
+        return <SqlFormatterTool />;
+
+      // Time & Date Tools
+      case "date-difference":
+        return <DateDifferenceTool />;
+      case "cron-explainer":
+        return <CronExplainerTool />;
+
+      // Math & Number Tools
+      case "unit-converter":
+        return <UnitConverterTool />;
+      case "number-system-converter":
+      case "binary-converter":
+        return <NumberSystemConverterTool />;
+      case "percentage-calculator":
+        return <PercentageCalculatorTool />;
+
+      // Student Essentials
+      case "git-cheatsheet":
+        return <GitCheatsheetTool />;
+      case "linux-cheatsheet":
+        return <LinuxCheatsheetTool />;
+      case "ascii-table":
+        return <AsciiTableTool />;
+
+      // AI Tools
+      case "ai-code-explainer":
+        return <AiCodeExplainerTool />;
+      case "ai-regex-explainer":
+        return <AiRegexExplainerTool />;
+
       default:
-        return <div>Tool implementation pending.</div>;
+        return (
+          <div className="p-8 text-center text-zinc-400 bg-zinc-900 border border-zinc-800 rounded-xl">
+            <p className="text-lg font-medium text-white mb-2">Workspace Coming Soon</p>
+            <p className="text-sm">This tool is scheduled for release in the upcoming toolkit update.</p>
+          </div>
+        );
     }
   };
 

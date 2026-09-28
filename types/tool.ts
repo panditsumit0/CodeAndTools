@@ -1,4 +1,17 @@
-export type ToolCategory = 'data' | 'security' | 'web' | 'developer' | 'converters' | 'compressors';
+export type ToolCategory =
+  | 'developer'
+  | 'text'
+  | 'data'
+  | 'security'
+  | 'web'
+  | 'images'
+  | 'documents'
+  | 'time'
+  | 'math'
+  | 'ai'
+  | 'utilities'
+  | 'converters'
+  | 'compressors';
 
 export interface ToolFaqItem {
   question: string;
@@ -16,6 +29,7 @@ export interface ToolDefinition {
   icon: string;
   keywords: string[];
   popular?: boolean;
+  studentEssential?: boolean;
   howToUse: string[];
   features: string[];
   faq: ToolFaqItem[];
