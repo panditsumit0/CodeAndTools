@@ -75,11 +75,11 @@ export function UrlEncoderTool() {
 
   const handleLoadSample = () => {
     if (mode === 'encode') {
-      const sample = 'https://api.devkit.dev/search?q=developer tools & privacy=100%&tags=react,nextjs,web tools';
+      const sample = 'https://api.codeandtools.dev/search?q=developer tools & privacy=100%&tags=react,nextjs,web tools';
       setInput(sample);
       processUrl(sample, 'encode', scope);
     } else {
-      const sample = 'https%3A%2F%2Fapi.devkit.dev%2Fsearch%3Fq%3Ddeveloper%20tools%20%26%20privacy%3D100%25';
+      const sample = 'https%3A%2F%2Fapi.codeandtools.dev%2Fsearch%3Fq%3Ddeveloper%20tools%20%26%20privacy%3D100%25';
       setInput(sample);
       processUrl(sample, 'decode', scope);
     }

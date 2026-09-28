@@ -30,14 +30,19 @@ export interface ExamQuestion {
   question: string;
 }
 
+export interface CommonMistakeItem {
+  mistake: string;
+  fix: string;
+}
+
 /**
- * Rich, structured topic content for B.Tech-level learning.
+ * Rich, structured topic content for beginner-to-advanced learning.
  * All fields are optional so existing topics keep working unchanged.
  */
 export interface TopicExplanation {
-  /** Simple 1-line intro (shown in the summary area) */
+  /** Simple 1-line intro (What is it? - simple definition) */
   intro?: string;
-  /** WHY this concept exists — the problem it solves */
+  /** WHY this concept exists — real purpose & where it is useful */
   why?: string;
   /** Real-world analogy to make abstract concepts concrete */
   analogy?: string;
@@ -49,10 +54,16 @@ export interface TopicExplanation {
   syntaxBreakdown?: { part: string; meaning: string }[];
   /** Line-by-line explanation of the primary code example */
   codeExplanation?: { line: string; explanation: string }[];
+  /** Detailed explanation of why the output appears */
+  outputExplanation?: string;
   /** Step-by-step execution trace */
   executionSteps?: string[];
-  /** Key points to remember */
+  /** 3-6 Key points to remember */
   keyPoints?: string[];
+  /** 3-5 Common mistakes with fix */
+  commonMistakes?: CommonMistakeItem[];
+  /** In simple words quick summary */
+  quickSummary?: string;
   /** Exam-specific tip */
   examTip?: string;
   /** Interview-specific tip */

@@ -1,14 +1,27 @@
+import { buildMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 import React from 'react';
 import type { Metadata } from 'next';
 import { ShieldCheck, Lock } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy — Code&Tools',
-  description: 'Code&Tools privacy policy: 100% client-side data processing, zero logging, zero telemetry.',
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Privacy Policy — 100% Client-Side Processing, Zero Logging & Zero Telemetry",
+  description:
+    "Code&Tools privacy policy: 100% client-side data processing, zero logging, zero tracking, and zero telemetry on your inputs, outputs, or files.",
+  path: "/privacy",
+  keywords: ["privacy policy", "data privacy", "client-side processing", "zero logs", "offline first"],
+});
 
 export default function PrivacyPage() {
+  const breadcrumbSchema = getBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Privacy Policy", path: "/privacy" },
+  ]);
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 space-y-12">
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold border border-emerald-500/20">
@@ -85,5 +98,6 @@ export default function PrivacyPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }

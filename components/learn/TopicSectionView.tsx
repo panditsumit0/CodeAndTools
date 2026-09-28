@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import {
   Play, AlertTriangle, Terminal, Code2, ChevronDown, ChevronUp,
   CheckCircle2, Circle, Clock, Zap, BookOpen, Target, Lightbulb,
-  GraduationCap, Brain, Trophy, ArrowRight, Copy, Check
+  GraduationCap, Brain, Trophy, ArrowRight, Copy, Check, Sparkles
 } from 'lucide-react';
 import { AskAIButton } from '@/components/ai/AskAIButton';
 import { CourseTopic, MCQ, } from '@/lib/learn/types';
@@ -371,6 +371,12 @@ export function TopicSectionView({
               <span>Expected Output:</span>
             </div>
             <pre className="text-zinc-300 whitespace-pre-wrap">{topic.expectedOutput}</pre>
+            {exp?.outputExplanation && (
+              <div className="mt-2.5 pt-2.5 border-t border-zinc-800/80 font-sans text-xs text-zinc-400">
+                <span className="font-semibold text-emerald-400 block mb-0.5">Why this output appears:</span>
+                <p className="leading-relaxed text-zinc-300">{exp.outputExplanation}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -474,16 +480,49 @@ export function TopicSectionView({
         </div>
       )}
 
-      {/* ── Common Mistake ── */}
-      {topic.commonMistake && (
+      {/* ── Common Mistakes ── */}
+      {exp?.commonMistakes && exp.commonMistakes.length > 0 ? (
+        <div className="rounded-xl border border-amber-500/20 bg-amber-500/[0.05] p-4 space-y-3">
+          <div className="flex items-center gap-2 text-amber-500 font-semibold text-xs sm:text-sm uppercase tracking-wider">
+            <AlertTriangle className="w-4 h-4 shrink-0" />
+            <span>Common Mistakes Beginners Make</span>
+          </div>
+          <div className="space-y-2.5">
+            {exp.commonMistakes.map((cm, idx) => (
+              <div key={idx} className="p-3 rounded-lg border border-zinc-800 bg-[#080C12] text-xs space-y-1.5">
+                <div className="flex items-start gap-2 text-rose-300">
+                  <span className="font-bold shrink-0 text-rose-400">❌ Mistake:</span>
+                  <span className="leading-relaxed">{cm.mistake}</span>
+                </div>
+                <div className="flex items-start gap-2 text-emerald-300 pt-0.5">
+                  <span className="font-bold shrink-0 text-[#22C55E]">✅ How to Fix:</span>
+                  <span className="leading-relaxed">{cm.fix}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : topic.commonMistake ? (
         <div className="rounded-xl border border-amber-500/20 bg-amber-500/[0.06] dark:bg-amber-500/[0.08] p-3.5 flex items-start gap-3 text-xs sm:text-sm text-amber-900 dark:text-amber-200">
           <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
           <div>
             <strong className="font-semibold block mb-0.5 text-amber-950 dark:text-amber-100">
-              Common B.Tech Exam / Coding Mistake:
+              Common Coding Mistake:
             </strong>
             <p className="leading-relaxed">{topic.commonMistake}</p>
           </div>
+        </div>
+      ) : null}
+
+      {/* ── In Simple Words (Quick Summary) ── */}
+      {exp?.quickSummary && (
+        <div className="rounded-xl border border-blue-500/25 bg-blue-500/[0.05] p-4 space-y-2">
+          <p className="text-xs font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5" /> In Simple Words (Quick Summary)
+          </p>
+          <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed font-medium">
+            {exp.quickSummary}
+          </p>
         </div>
       )}
 

@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Free Developer Tools, Online Compiler & Engineering Tutorials",
+  description: "All-in-one private developer platform with 100% browser-based utilities, online multi-language compilers, file converters, compressors, and engineering guides.",
+  path: "/",
+});
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';

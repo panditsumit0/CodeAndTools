@@ -1,19 +1,27 @@
+import { buildMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from 'next';
 import { Sparkles } from 'lucide-react';
 import { AIChatPage } from '@/components/ai/AIChatPage';
 
-export const metadata: Metadata = {
-  title: 'Code&Tools AI — Your AI Coding & Learning Assistant',
+export const metadata: Metadata = buildMetadata({
+  title: "AI Coding Assistant — Explain, Debug & Convert Code in Real-Time",
   description:
-    'Ask Code&Tools AI to explain code, debug errors, optimize algorithms, convert between languages, and learn programming concepts. Powered by Gemini.',
-  openGraph: {
-    title: 'Code&Tools AI — Coding & Learning Assistant',
-    description: 'AI-powered coding assistant for developers and B.Tech students.',
-  },
-};
+    "Ask Code&Tools AI to explain code, debug compiler errors, optimize algorithms, convert between programming languages, and learn engineering concepts.",
+  path: "/ai",
+  keywords: ["ai coding assistant", "debug code ai", "explain code", "code converter ai", "programming tutor"],
+});
 
 export default function AIPage() {
+  const breadcrumbSchema = getBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "AI Assistant", path: "/ai" },
+  ]);
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
       {/* Header */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
@@ -32,5 +40,6 @@ export default function AIPage() {
       {/* AI Workspace */}
       <AIChatPage />
     </div>
+    </>
   );
 }

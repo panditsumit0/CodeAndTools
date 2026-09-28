@@ -21,7 +21,7 @@ export function RegexTesterTool() {
     u: false,
   });
   const [testString, setTestString] = useState<string>(
-    'Contact our engineering team at support@devkit.dev or security-reports@devkit.dev for inquiries.'
+    'Contact our engineering team at support@codeandtools.dev or security-reports@codeandtools.dev for inquiries.'
   );
 
   const flagString = Object.entries(flags)
@@ -111,7 +111,7 @@ export function RegexTesterTool() {
 
   const presets = [
     { label: 'Email', pattern: '([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})', test: 'Email: dev@devkit.local and team@company.org' },
-    { label: 'URL', pattern: 'https?:\\/\\/[\\w\\.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&\'\\(\\)\\*\\+,;=.]+', test: 'Visit https://devkit.dev or http://localhost:3000/docs for details.' },
+    { label: 'URL', pattern: 'https?:\\/\\/[\\w\\.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&\'\\(\\)\\*\\+,;=.]+', test: 'Visit https://codeandtools.dev or http://localhost:3000/docs for details.' },
     { label: 'IPv4', pattern: '\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b', test: 'DNS servers: 8.8.8.8, 1.1.1.1, and 192.168.1.1.' },
     { label: 'Hex Color', pattern: '#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})', test: 'Colors: #10B981, #0f172a, and #fff.' },
     { label: 'ISO Date', pattern: '\\d{4}-\\d{2}-\\d{2}', test: 'Releases: 2026-09-26, 2026-10-15, and 2026-12-01.' },

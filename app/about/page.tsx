@@ -1,3 +1,4 @@
+import { buildMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -13,17 +14,19 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'About Code&Tools — Private Browser Utilities for Developers & B.Tech Students',
+export const metadata: Metadata = buildMetadata({
+  title: "About Us — Architecture & Zero-Network-Transfer Privacy Promise",
   description:
-    'Learn about Code&Tools architecture, our zero-network-transfer privacy promise, and our developer-first philosophy.',
-  openGraph: {
-    title: 'About Code&Tools — Private Browser Utilities for Developers',
-    description: 'Build. Learn. Create. — A complete toolkit, private and browser-based.',
-  },
-};
+    "Learn about Code&Tools architecture, our zero-network-transfer privacy promise, and our developer-first philosophy.",
+  path: "/about",
+  keywords: ["about code&tools", "client-side architecture", "zero telemetry", "private developer tools"],
+});
 
 export default function AboutPage() {
+  const breadcrumbSchema = getBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+  ]);
   const comparison = [
     {
       feature: 'Data Processing Location',
@@ -64,6 +67,11 @@ export default function AboutPage() {
   ];
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 space-y-16">
       {/* Hero */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -223,5 +231,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

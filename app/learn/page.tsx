@@ -1,3 +1,4 @@
+import { buildMetadata, getBreadcrumbJsonLd, getCourseJsonLd } from "@/lib/seo";
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -14,24 +15,42 @@ import { DynamicIcon } from '@/components/icons/DynamicIcon';
 
 import { BackToTop } from '@/components/BackToTop';
 
-export const metadata: Metadata = {
-  title: 'Which Programming Language Should You Learn? — B.Tech Guide | Code&Tools',
+export const metadata: Metadata = buildMetadata({
+  title: "Which Programming Language Should You Learn? — B.Tech Guide & Comparison",
   description:
-    'Compare C, C++, Java, Python, and TypeScript. Find the ideal programming language for B.Tech semester exams, DSA, competitive coding, AI/ML, and web engineering.',
+    "Compare C, C++, Java, Python, and TypeScript. Find the ideal programming language for B.Tech semester exams, DSA, competitive coding, AI/ML, and web engineering.",
+  path: "/learn",
   keywords: [
-    'learn programming',
-    'which programming language to learn',
-    'B.Tech programming languages',
-    'C vs C++',
-    'Java vs Python',
-    'TypeScript vs JavaScript',
-    'DSA languages',
-    'coding for engineering students',
+    "learn programming",
+    "which programming language to learn",
+    "btech programming languages",
+    "c vs cpp",
+    "java vs python",
+    "typescript vs javascript",
+    "dsa programming languages",
+    "engineering coding tutorials",
   ],
-};
+});
 
 export default function LearnHubPage() {
+  const breadcrumbSchema = getBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Learn Programming", path: "/learn" },
+  ]);
+  const courseSchemas = COURSE_LIST.map((c) =>
+    getCourseJsonLd({
+      name: `${c.name} Programming Course`,
+      description: c.shortDescription,
+      path: `/learn/${c.slug}`,
+    })
+  );
+  const schemas = [breadcrumbSchema, ...courseSchemas];
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+      />
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-16">
       {/* 1. Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -258,5 +277,6 @@ export default function LearnHubPage() {
 
       <BackToTop />
     </div>
+    </>
   );
 }

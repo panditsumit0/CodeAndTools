@@ -4,6 +4,12 @@ import type { Metadata } from "next";
 import { getToolBySlug, getToolsByCategory } from "@/lib/tools-registry";
 import { ToolLayout } from "@/components/tools/ToolLayout";
 import { FileCompressorWorkspace, type CompressorMode } from "@/components/compressors/FileCompressorWorkspace";
+import {
+  buildMetadata,
+  getSoftwareApplicationJsonLd,
+  getBreadcrumbJsonLd,
+  getFaqJsonLd,
+} from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -21,35 +27,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tool = getToolBySlug(slug);
 
   if (!tool || tool.category !== "compressors") {
-    return {
-      title: "Compressor Not Found — Code&Tools",
+    return buildMetadata({
+      title: "Compressor Not Found",
       description: "The requested file compressor utility could not be found.",
-    };
+      path: `/compressors/${slug}`,
+      noIndex: true,
+    });
   }
 
-  const title = `${tool.name} Online | Free & Private — Code&Tools`;
-  const description = `${tool.shortDescription} 100% private, runs entirely in your browser with zero server uploads.`;
-
-  return {
-    title,
-    description,
-    keywords: [...tool.keywords, "file compressor", "free compressor", "reduce file size", "browser-based", "privacy-first"],
-    openGraph: {
-      title,
-      description,
-      type: "website",
-      url: `https://devkit.dev/compressors/${tool.slug}`,
-      siteName: "Code&Tools",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-    },
-    alternates: {
-      canonical: `https://devkit.dev/compressors/${tool.slug}`,
-    },
-  };
+  return buildMetadata({
+    title: `${tool.name} Online — Free & Private File Compressor`,
+    description: `${tool.shortDescription} 100% private, runs entirely inside your browser with maximum compression.`,
+    path: `/compressors/${tool.slug}`,
+    keywords: [
+      ...tool.keywords,
+      "file compressor",
+      "compress files online",
+      "browser compressor",
+      "privacy-first",
+      tool.name.toLowerCase(),
+    ],
+  });
 }
 
 export default async function CompressorDetailPage({ params }: PageProps) {
@@ -60,13 +58,28 @@ export default async function CompressorDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const appSchema = getSoftwareApplicationJsonLd(tool);
+  const breadcrumbSchema = getBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Compressors", path: "/compressors" },
+    { name: tool.name, path: `/compressors/${tool.slug}` },
+  ]);
+  const faqSchema = getFaqJsonLd(tool.faq);
+  const schemas = [appSchema, breadcrumbSchema, faqSchema].filter(Boolean);
+
   return (
-    <ToolLayout tool={tool}>
-      <FileCompressorWorkspace
-        mode={tool.slug as CompressorMode}
-        toolName={tool.name}
-        toolDescription={tool.shortDescription}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
-    </ToolLayout>
+      <ToolLayout tool={tool}>
+        <FileCompressorWorkspace
+          mode={tool.slug as CompressorMode}
+          toolName={tool.name}
+          toolDescription={tool.shortDescription}
+        />
+      </ToolLayout>
+    </>
   );
 }
